@@ -1,0 +1,168 @@
+
+
+/* About Us Section
+--------------------------------*/
+#about {
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+#about .about-img {
+  height: 350px;
+  overflow: hidden;
+}
+
+#about .about-img img {
+  margin-left: -15px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  #about .about-img {
+    height: auto;
+  }
+  #about .about-img img {
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+}
+
+#about .content .h2 {
+  color: #333;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+#about .content h3 {
+  color: #777;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  font-style: italic;
+}
+
+#about .content p {
+  line-height: 26px;
+}
+
+#about .content p:last-child {
+  margin-bottom: 0;
+}
+
+#about .content i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #1dc8cd;
+}
+
+#about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+#about .content ul li {
+  padding-bottom: 10px;
+}
+
+.aboutushead {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .aboutushead {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+
+.aboutushead .section-description{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-description{
+  font-size: 18px;
+}
+
+
+
+/* More Features Section
+--------------------------------*/
+#more-features {
+  padding: 0px 0 50px 0;
+  overflow: hidden;
+}
+
+#more-features .box {
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+  background: #fff;
+  transition: 0.4s;
+}
+
+#more-features .icon {
+  float: left;
+}
+
+#more-features .icon i {
+  color: #666666;
+  font-size: 80px;
+  transition: 0.5s;
+  line-height: 0;
+}
+
+#more-features .icon i:before {
+  background: #1dc8cd;
+  background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#more-features h4 {
+  margin-left: 100px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#more-features h4 a {
+  color: #111;
+}
+
+#more-features p {
+  font-size: 14px;
+  margin-left: 100px;
+  margin-bottom: 0;
+  line-height: 24px;
+}
+
+@media (max-width: 767px) {
+  #more-features .box {
+    margin-bottom: 20px;
+  }
+  #more-features .icon {
+    float: none;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  #more-features h4, #more-features p {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+
+.section-title{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

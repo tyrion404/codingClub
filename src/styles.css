@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+  Theme Name: Avilon
+  Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+  Author: BootstrapMade.com
+  License: https://bootstrapmade.com/license/
+*/
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #666666;
+  margin: 0 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #1dc8cd;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #1dc9ce;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  color: #fff;
+  padding: 2px 20px 8px 20px;
+  font-size: 16px;
+  border-radius: 4px 4px 0 0;
+  right: 15px;
+  bottom: 0;
+  transition: none;
+}
+
+.back-to-top:focus {
+  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #1dc8cd;
+  color: #fff;
+}
+

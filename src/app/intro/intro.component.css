@@ -1,0 +1,141 @@
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+#intro {
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/img/backintro.jpg") center top no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #intro {
+    background-attachment: fixed;
+  }
+}
+
+#intro .intro-text {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  right: 0;
+  height: calc(50% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#intro h2 {
+  margin: 30px 0 10px 0;
+  padding: 0 15px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #intro h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#intro p {
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #intro p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+#intro .btn-get-started {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+#intro .btn-get-started:hover {
+  color: #1dc8cd;
+  background: #fff;
+}
+
+#intro .product-screens {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+#intro .product-screens img {
+  box-shadow: 0px -2px 19px 4px rgba(0, 0, 0, 0.29);
+}
+
+#intro .product-screens .product-screen-1 {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% + 54px);
+  bottom: 0;
+  top: 150px;
+}
+
+#intro .product-screens .product-screen-2 {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 154px);
+  bottom: 0;
+  top: 90px;
+}
+
+#intro .product-screens .product-screen-3 {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 374px);
+  bottom: 0;
+  top: 30px;
+}
+
+@media (max-width: 767px) {
+  #intro .product-screens .product-screen-3 {
+    position: static;
+    padding-top: 30px;
+  }
+  #intro .product-screens .product-screen-1, #intro .product-screens .product-screen-2 {
+    display: none;
+  }
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+
+
+
