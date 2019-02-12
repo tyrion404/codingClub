@@ -11,6 +11,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { FAQComponent } from './faq/faq.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     GalleryComponent,
     FAQComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

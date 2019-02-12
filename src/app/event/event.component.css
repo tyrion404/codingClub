@@ -1,0 +1,90 @@
+
+/* Pricing Section
+--------------------------------*/
+#event {
+    padding: 30px 0 60px 0;
+    overflow: hidden;
+}
+
+#event .box {
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+    background: #fff;
+    text-align: center;
+    min-height: 550px;
+}
+
+#event h4 {
+    font-size: 30px;
+    color: #1dc8cd;
+    font-weight: 300;
+}
+
+#event h4 sup {
+    font-size: 20px;
+    top: -20px;
+}
+
+#event h4 span {
+    color: #bababa;
+    font-size: 20px;
+}
+
+#event ul {
+    padding: 0;
+    list-style: none;
+    color: #999;
+    text-align: left;
+    line-height: 20px;
+}
+
+#event ul li {
+    padding-bottom: 12px;
+}
+
+#event ul i {
+    color: #1dc8cd;
+    font-size: 18px;
+    padding-right: 4px;
+}
+
+#event img{
+    height: auto;
+    width: 315px;
+    padding-bottom: 10px;
+}
+
+#event .get-started-btn {
+    background: #515e61;
+    display: inline-block;
+    padding: 6px 30px;
+    border-radius: 20px;
+    color: #fff;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+#event .featured {
+    border: 2px solid #1dc8cd;
+}
+
+#event .featured .get-started-btn {
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+}
+.section-title{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: inherit;
+    font-size: 48px;
+}
+
+.section-description
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
