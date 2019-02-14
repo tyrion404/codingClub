@@ -12,7 +12,8 @@
     box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
     background: #fff;
     text-align: center;
-    min-height: 550px;
+    min-height: 420px;
+    border-radius: 7px;
 }
 
 #event h4 {
@@ -56,15 +57,17 @@
 }
 
 #event .get-started-btn {
-    background: #515e61;
+    background: #ffffff;
     display: inline-block;
-    padding: 6px 30px;
-    border-radius: 20px;
-    color: #fff;
+    padding: 5px 30px;
+    border-radius: 25px;
+    color: #fff !important;
     transition: none;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
+    border-color: #1dc8cd;
+    border-width: 3px;
 }
 
 #event .featured {

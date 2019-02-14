@@ -37,6 +37,7 @@ export class EventComponent implements OnInit {
 
   public register(ID){
 
+
     console.log(ID);
   }
 

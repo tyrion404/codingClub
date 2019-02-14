@@ -1,0 +1,172 @@
+<div class="page-wrapper p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5 ">
+      <div class="card-heading bg-gra-03 ">
+        <h2 class="title">Event Registration Form</h2>
+      </div>
+
+<div class="marginr">
+      <div class="card-body-1">
+        <div class="form-row">
+          <div class="name temmem">Team Memmbers</div>
+          <div class="value">
+            <div class="input-group">
+              <div class="rs-select2 js-select-simple select--no-search">
+                <select (change)="teamMembers($event)">
+                  <option disabled="disabled" selected="selected">Choose option</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <div class="select-dropdown"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+      <!-- ===========
+for 1 member
+===========-->
+         <div *ngIf="teamMem == 1">
+
+            <div class="card-body card-5">
+
+              <div class="form-row m-b-55">
+                  <div class="name">Name</div>
+                  <div class="value">
+                    <div class="row row-refine">
+                      <div class="col-9">
+                        <div class="input-group-desc">
+                          <input class="input--style-5" type="text" name="phone">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="form-row m-b-55">
+                <div class="name">Email</div>
+                <div class="value">
+                  <div class="row row-refine">
+                    <div class="col-9">
+                      <div class="input-group-desc">
+                        <input class="input--style-5" type="email" name="phone">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row m-b-55">
+                <div class="name">Phone</div>
+                <div class="value">
+                  <div class="row row-refine">
+                    <div class="col-9">
+                      <div class="input-group-desc">
+                        <input class="input--style-5" type="tel" name="phone">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <button class="btn btn--radius-2 btn--red" (click)="infosub($event)">submit</button>
+            </div>
+         </div>
+      <!-- ===========
+            for 1 member ends
+            ===========-->
+      <!--============
+      for 2 members
+      ==============-->
+      <div *ngIf="teamMem == 2">
+        <div class="card-body card-5">
+
+          <!--for leader-->
+<h3 style="text-align: center; padding-bottom: 10px;">For Leader</h3>
+          <div class="form-row m-b-55">
+            <div class="name">Name</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="text" name="phone">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row m-b-55">
+            <div class="name">Email</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="email" name="phone">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row m-b-55">
+            <div class="name">Phone</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="tel" name="phone">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--for member-->
+          <h3 style="text-align: center; padding-bottom: 10px;">For Member</h3>
+          <div class="form-row m-b-55">
+            <div class="name">Name</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="text" name="phone">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row m-b-55">
+            <div class="name">Email</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="email" name="phone">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row m-b-55">
+            <div class="name">Phone</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="tel" name="phone">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--submit-->
+          <button class="btn btn--radius-2 btn--red" (click)="info($event)">submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

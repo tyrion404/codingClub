@@ -12,6 +12,7 @@ import { FAQComponent } from './faq/faq.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventComponent } from './event/event.component';
+import { RegFormComponent } from './event/reg-form/reg-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EventComponent } from './event/event.component';
     FAQComponent,
     ContactUsComponent,
     FooterComponent,
-    EventComponent
+    EventComponent,
+    RegFormComponent,
   ],
   imports: [
     BrowserModule,
