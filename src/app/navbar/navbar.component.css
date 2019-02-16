@@ -32,7 +32,7 @@
 
 @media (max-width: 768px) {
   #header #logo h1 {
-    font-size: 28px;
+    font-size: 8px;
     margin-top: 0;
   }
   #header #logo img {
@@ -133,7 +133,7 @@
 
 .nav-menu > li {
   margin-left: 10px;
-  
+
 }
 
 .nav-menu ul {

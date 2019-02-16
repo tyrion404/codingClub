@@ -1,7 +1,5 @@
 
-<!--==========================
-  Event Section
-============================-->
+<!--Event Section-->
 <section id="event" class="section-bg">
   <div class="container">
 
@@ -15,18 +13,18 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="box wow fadeInLeft">
-            <img src="../../assets/img/blog/img1.jpg">
+            <img src="{{ i.Url }}">
             <h4>{{i.Event_Name}}</h4>
             <ul>
               <li>{{i.dec}}</li>
             </ul>
             <!-- <a href="#" class="get-started-btn">Get Started</a> -->
-            <button class = "get-started-btn" (click)='register(i.ID)'>Get Started</button>
+            <button class = "get-started-btn" routerLink="/regform">Click Here</button>
           </div>
         </div>
 
     </div>
     
   </div>
-</section><!-- #pricing -->
+</section>
 
