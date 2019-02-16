@@ -12,6 +12,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventComponent } from './event/event.component';
 import { RegFormComponent } from './event/reg-form/reg-form.component';
+import { ForspaceComponent } from './forspace/forspace.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RegFormComponent } from './event/reg-form/reg-form.component';
     FooterComponent,
     EventComponent,
     RegFormComponent,
+    ForspaceComponent,
   ],
   imports: [
     BrowserModule,
