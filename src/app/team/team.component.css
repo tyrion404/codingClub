@@ -57,3 +57,10 @@
   color: inherit;
   font-size: 48px;
 }
+
+.section-description
+{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -19,8 +19,8 @@ export class RegFormComponent implements OnInit {
     console.log(event);
   }
 
-  infosub(event: any){
-    console.log("hey");
+  infoSub(){
+    console.log();
   }
 
 }
