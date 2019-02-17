@@ -21,7 +21,7 @@
 .spacer{
   margin-right: 30px;
   position: absolute;
-  margin-left: 55%;
+  margin-left: 50%;
 }
 
 .spacer a{
@@ -41,6 +41,10 @@
     display: none;
   }
 
+  .mobilogodisp{
+    display: none;
+  }
+
 }
 
 
@@ -50,5 +54,8 @@
     display: none;
   }
 
+  .mobilogo{
+    display: none;
+  }
 
 }
