@@ -11,7 +11,7 @@ import { RegFormComponent } from './event/reg-form/reg-form.component';
 
 const routes: Routes = [
   { path: 'event', component: EventComponent },
-  { path: '', component: IntroComponent },
+  { path: 'home', component: IntroComponent },
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'contactus', component: ContactUsComponent },
   { path: 'faq', component: FAQComponent },

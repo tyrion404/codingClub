@@ -60,13 +60,13 @@
     background: #ffffff;
     display: inline-block;
     padding: 5px 30px;
-    border-radius: 22px;
+    border-radius: 33px;
     color: #1dc8cd;
     transition: none;
     font-size: 26px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
-    border-color: #1dc8cd;
+    border-color: inherit;
     border-width: 3px;
 }
 
