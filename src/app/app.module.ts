@@ -14,7 +14,8 @@ import { RegFormComponent } from './event/reg-form/reg-form.component';
 import { ForspaceComponent } from './forspace/forspace.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule,
+  MatButtonModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavrefComponent } from './navref/navref.component';
 
