@@ -1,61 +1,25 @@
-.sidenav-container {
-  height: auto;
+.example-icon {
+  padding: 0 14px;
 }
 
-.sidenav {
-  width: 200px;
+.example-spacer {
+  flex: 1 1 auto;
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
+.mat-drawer-inner-container
+{
+  width: 230px;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
-  z-index: 1;
-}
-
-
-.spacer{
-  margin-right: 30px;
-  position: absolute;
-  margin-left: 50%;
-}
-
-.spacer a{
-  display: inline-block;
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.mat-toolbar{
-  height: 80px;
-}
-
-@media (min-width: 768px) {
-
-  .sidenav{
+@media (max-width: 786px) {
+  .hidein{
     display: none;
   }
 
-  .mobilogodisp{
-    display: none;
+  .mat-drawer-inner-container
+  {
+    width: 190px;
   }
-
 }
 
 
-@media (max-width: 768px) {
-
-  .spacer{
-    display: none;
-  }
-
-  .mobilogo{
-    display: none;
-  }
-
-}

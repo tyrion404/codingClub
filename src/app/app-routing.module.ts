@@ -10,8 +10,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { RegFormComponent } from './event/reg-form/reg-form.component';
 
 const routes: Routes = [
+  { path: '', component: IntroComponent},
   { path: 'event', component: EventComponent },
-  { path: 'home', component: IntroComponent },
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'contactus', component: ContactUsComponent },
   { path: 'faq', component: FAQComponent },
