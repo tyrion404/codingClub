@@ -5,3 +5,21 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.mat-drawer-inner-container
+{
+  width: 230px;
+}
+
+@media (max-width: 786px) {
+  .hidein{
+    display: none;
+  }
+
+  .mat-drawer-inner-container
+  {
+    width: 190px;
+  }
+}
+
+

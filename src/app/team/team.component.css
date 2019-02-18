@@ -4,6 +4,7 @@
 #team {
   padding: 20px 0;
   overflow: hidden;
+  height: 100vh;
 }
 
 #team .member {
@@ -63,4 +64,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+@media (max-width: 786px) {
+  #team{
+    height: 100%;
+  }
 }
