@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgIf} from '@angular/common';
+import { ApicallService } from '../.././apicall.service';
 
 @Component({
   selector: 'app-reg-form',
@@ -9,9 +10,12 @@ import {NgIf} from '@angular/common';
 export class RegFormComponent implements OnInit {
 
   teamMem: number;
-  constructor() { }
+  ID: any;
+  constructor(private api: ApicallService) { }
 
   ngOnInit() {
+    this.ID = this.api.getid();
+    console.log(this.api.getid());
   }
 
   teamMembers(event : any){

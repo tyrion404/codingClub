@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApicallService } from '../apicall.service';
 
 @Component({
   selector: 'app-event',
@@ -10,7 +11,7 @@ export class EventComponent implements OnInit {
 
   v: any;
 
-  constructor() { }
+  constructor(private api:ApicallService) { }
 
   ngOnInit() {
 
@@ -37,6 +38,7 @@ export class EventComponent implements OnInit {
 
   public register(ID){
     console.log(ID);
+    this.api.setid(ID);
   }
 
 }

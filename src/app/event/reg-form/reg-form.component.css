@@ -76,7 +76,7 @@
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .form-row .name {
@@ -289,7 +289,7 @@ h6 {
 }
 
 .m-b-55 {
-    margin-bottom: 55px;
+    margin-bottom: 30px;
 }
 
 /* ==========================================================================
@@ -519,6 +519,7 @@ input {
     padding: 0 22px;
     font-size: 16px;
     color: #555;
+    width: 130%;
 }
 
 .input-group-desc {
@@ -704,14 +705,26 @@ input {
 }
 
 .card-body-1 {
-    padding: 30px 85px 0px 85px;
-    padding-bottom: 1px;
+    padding: 15px 85px 0px 85px;
+    padding-bottom: 0.5px;
 }
 
 @media (max-width: 767px) {
     .card-body-1 {
         padding: 30px 30px 0px 30px;
         padding-bottom: 1px;
+    }
+
+    .input--style-5 {
+        background: #e5e5e5;
+        line-height: 50px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 0 22px;
+        font-size: 16px;
+        color: #555;
+        width: 160%;
     }
 }
 
