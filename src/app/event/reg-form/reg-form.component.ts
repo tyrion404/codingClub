@@ -10,6 +10,11 @@ import { ApicallService } from '../.././apicall.service';
 export class RegFormComponent implements OnInit {
 
   teamMem: number;
+  one: string;
+  two: string;
+  three: string;
+  four: string;
+  five: string;
   ID: any;
   constructor(private api: ApicallService) { }
 
@@ -27,4 +32,23 @@ export class RegFormComponent implements OnInit {
     console.log();
   }
 
+  statusOfEvent() {
+    if (this.ID == 1) {
+      this.four = 'disabled';
+      this.five = 'disabled';
+      this.three = 'disabled';
+    }
+    else if (this.ID == 2) {
+      this.one = 'disabled';
+      this.two = 'disabled';
+      this.three = 'disabled';
+    }
+    else{
+      this.one = 'disabled';
+      this.two = 'disabled';
+      this.three = 'disabled';
+    }
+  }
+
 }
+
