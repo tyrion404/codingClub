@@ -16,6 +16,8 @@ export class RegFormComponent implements OnInit {
   four: string;
   five: string;
   ID: any;
+  Var: Array<number> = [];
+  Var1: Array<number> = [];
   constructor(private api: ApicallService) { }
 
   ngOnInit() {
@@ -23,9 +25,15 @@ export class RegFormComponent implements OnInit {
     console.log(this.api.getid());
   }
 
-  teamMembers(event : any){
+  teamMembers(event: any) {
     this.teamMem = event.target.value;
-    console.log(event);
+    console.log(this.teamMem);
+    for (let i = 0; i < this.teamMem - 1; i++) {
+       this.Var.push(i);
+    }
+    this.Var1 = this.Var;
+    this.Var = [];
+    console.log(this.Var);
   }
 
   infoSub(){

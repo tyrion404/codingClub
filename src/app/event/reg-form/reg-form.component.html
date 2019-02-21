@@ -85,7 +85,7 @@ for 1 member
       <!--============
       for 2 members
       ==============-->
-      <div *ngIf="teamMem == 2">
+      <div *ngIf="teamMem >= 2">
         <div class="card-body card-5">
 
           <!--for leader-->
@@ -129,7 +129,9 @@ for 1 member
             </div>
           </div>
 <!--for member-->
-          <h3 style="text-align: center; padding-bottom: 10px;">For Member</h3>
+          <div *ngFor="let item of Var1">
+
+            <h3 style="text-align: center; padding-bottom: 10px;">For Member {{ item + 1 }}</h3>
           <div class="form-row m-b-55">
             <div class="name">Name</div>
             <div class="value">
@@ -169,6 +171,8 @@ for 1 member
             </div>
           </div>
 
+          </div>
+          
           <!--submit-->
           <button class="btn btn--radius-2 btn--red">submit</button>
         </div>
