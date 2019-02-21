@@ -19,6 +19,12 @@ import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule,
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavrefComponent } from './navref/navref.component';
 import { ApicallService } from './apicall.service'
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +54,14 @@ import { ApicallService } from './apicall.service'
     LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+//AngularFireDatabaseModule,
+//AngularFireFunctionsModule,
+AngularFirestoreModule,
+AngularFireStorageModule
+//AngularFireMessagingModule
   ],
   providers: [ ApicallService ],
   bootstrap: [AppComponent]
