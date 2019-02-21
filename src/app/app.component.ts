@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +11,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class AppComponent {
   title = 'codingClub';
   constructor(db: AngularFirestore){
-    
+
   }
 }
