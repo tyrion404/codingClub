@@ -37,7 +37,7 @@ export class RegFormComponent implements OnInit {
     console.log(this.Var);
   }
 
-  availableEntries(event: any) {
+  availableEntries() {
 
       if( this.ID ==1)
       {
