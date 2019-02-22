@@ -9,6 +9,7 @@ import { ApicallService } from '../.././apicall.service';
 })
 export class RegFormComponent implements OnInit {
 
+  always: number;
   teamMem: number;
   availEntFrom1 : any;
   availEntTo1 : any;
@@ -22,6 +23,7 @@ export class RegFormComponent implements OnInit {
   ngOnInit() {
     this.ID = this.api.getid();
     console.log(this.api.getid());
+    this.always=1;
   }
 
   teamMembers(event: any) {
