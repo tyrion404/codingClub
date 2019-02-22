@@ -10,12 +10,8 @@ import { ApicallService } from '../.././apicall.service';
 export class RegFormComponent implements OnInit {
 
   teamMem: number;
-  one: string;
-  two: string;
-  three: string;
-  four: string;
-  five: string;
-  availEnt : any;
+  availEntFrom1 : any;
+  availEntTo1 : any;
   ID: any;
   Var: Array<number> = [];
   Var1: Array<number> = [];
@@ -39,35 +35,39 @@ export class RegFormComponent implements OnInit {
     console.log(this.Var);
   }
 
-  availableEntriesE1(event: any) {
+  availableEntries(event: any) {
 
-    this.availEnt = 3;
-    console.log(this.availEnt);
-    for (let i = 1; i <= this.availEnt; i++) {
-      this.allowMem.push(i);
+      if( this.ID ==1)
+      {
+        this.availEntFrom1 = 6;
+        this.availEntTo1 = 6;
+        for (let i=this.availEntFrom1; i <= this.availEntTo1; i++) {
+          this.allowMem.push(i);
+        }
+        this.allowMem1 = this.allowMem;
+      }
+
+      if( this.ID ==2)
+    {
+      this.availEntFrom1 = 2;
+      this.availEntTo1 = 5;
+      for (let i=this.availEntFrom1; i <= this.availEntTo1; i++) {
+        this.allowMem.push(i);
+      }
+      this.allowMem1 = this.allowMem;
     }
-    this.allowMem1 = this.allowMem;
+
+    if( this.ID ==3)
+    {
+      this.availEntFrom1 = 1;
+      this.availEntTo1 = 3;
+      for (let i=this.availEntFrom1; i <= this.availEntTo1; i++) {
+        this.allowMem.push(i);
+      }
+      this.allowMem1 = this.allowMem;
+    }
   }
 
-  availableEntriesE2(event: any) {
-
-    this.availEnt = 6;
-    console.log(this.availEnt);
-    for (let i = 1; i <= this.availEnt; i++) {
-      this.allowMem.push(i);
-    }
-    this.allowMem1 = this.allowMem;
-  }
-
-  availableEntriesE3(event: any) {
-
-    this.availEnt = 5;
-    console.log(this.availEnt);
-    for (let i = 1; i <= this.availEnt; i++) {
-      this.allowMem.push(i);
-    }
-    this.allowMem1 = this.allowMem;
-  }
 
   infoSub(){
     console.log();

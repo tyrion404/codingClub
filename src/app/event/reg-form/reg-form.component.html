@@ -7,9 +7,7 @@
 
 <div class="marginr">
       <div class="card-body-1" >
-          <div class="name temmem"><div *ngIf="ID == 1 && availableEntriesE1()"> <p style="font-family: Arial;font-size: 25px;text-align: center;margin-bottom: 10px;">EVENT NAME 1</p></div></div>
-          <div class="name temmem"><div *ngIf="ID == 2 && availableEntriesE2()"><p style="font-family: Arial;font-size: 25px;text-align: center;margin-bottom: 10px;">EVENT NAME 2</p></div></div>
-          <div class="name temmem"><div *ngIf="ID == 3 && availableEntriesE3()"><p style="font-family: Arial;font-size: 25px;text-align: center;margin-bottom: 10px;">EVENT NAME 3</p></div></div>
+          <div class="name temmem"><div *ngIf="ID && availableEntries()"></div></div>
         <div class="form-row">
 
           <div class="name temmem">Team Members</div>
