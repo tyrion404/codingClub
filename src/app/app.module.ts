@@ -57,7 +57,7 @@ import { environment } from '../environments/environment';
     MatListModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-//AngularFireDatabaseModule,
+    //AngularFireDatabaseModule,
 //AngularFireFunctionsModule,
 AngularFirestoreModule,
 AngularFireStorageModule
