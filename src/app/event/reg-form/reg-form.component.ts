@@ -31,7 +31,9 @@ export class RegFormComponent implements OnInit {
 
   checkIndi(){
     const name = this.getValue('pName');
-    if(name === '') {alert('All fields are mandotory'); }
+    const email = this.getValue('pEmail');
+    const phone = this.getValue('pPhone');
+    if(name === '' || email === '' || phone === '') {alert('All fields are mandotory'); }
 
   }
 
