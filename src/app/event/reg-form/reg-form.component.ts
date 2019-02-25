@@ -24,18 +24,31 @@ export class RegFormComponent implements OnInit {
     console.log(event);
   }
 
-  infoSub(){
+  infoSub01(){
     this.checkIndi();
     console.log();
   }
 
+  infoSub02(){
+    this.checkTeam(this.getValue('choose'));
+    console.log();
+  }
   checkIndi(){
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
     if(name === '' || email === '' || phone === '') {alert('All fields are mandotory'); }
 
+    else{
+
+    }
+
   }
+
+  checkTeam(id){
+    
+  }
+
 
   getValue(id) {
     return (document.getElementById(id) as HTMLInputElement).value;
