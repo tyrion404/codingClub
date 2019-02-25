@@ -11,7 +11,7 @@ export class EventComponent implements OnInit {
 
   v: any;
 
-  constructor(private api:ApicallService) { }
+  constructor(private api: ApicallService) { }
 
   ngOnInit() {
 
@@ -39,6 +39,10 @@ export class EventComponent implements OnInit {
   public register(ID){
     console.log(ID);
     this.api.setid(ID);
+  }
+
+  public signIn(){
+    
   }
 
 }
