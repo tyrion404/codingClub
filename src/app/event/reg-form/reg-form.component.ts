@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgIf} from '@angular/common';
 import { ApicallService } from '../.././apicall.service';
+import { checkBinding } from '@angular/core/src/view/util';
 
 @Component({
   selector: 'app-reg-form',
@@ -24,7 +25,17 @@ export class RegFormComponent implements OnInit {
   }
 
   infoSub(){
+    this.checkIndi();
     console.log();
   }
 
+  checkIndi(){
+    const name = this.getValue('pName');
+    if(name === '') {alert('All fields are mandotory'); }
+
+  }
+
+  getValue(id) {
+    return (document.getElementById(id) as HTMLInputElement).value;
+}
 }
