@@ -13,6 +13,7 @@ export const environment = {
     messagingSenderId: "161009164795"
   }
 };
+console.log("firebase init");
 
 /*
  * For easier debugging in development mode, you can import the following file
