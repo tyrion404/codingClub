@@ -25,15 +25,25 @@ export class RegFormComponent implements OnInit {
   }
 
   infoSub01(){
-    this.checkIndi();
+    const config = {
+      apiKey: "AIzaSyB30s0J6YXG2vjrpXb2ebxZs07MvMcBwQk",
+      authDomain: "codingclub-f3cba.firebaseapp.com",
+      databaseURL: "https://codingclub-f3cba.firebaseio.com",
+      projectId: "codingclub-f3cba",
+      storageBucket: "codingclub-f3cba.appspot.com",
+      messagingSenderId: "161009164795"
+    };
+   // firebase.initializeApp(config);
+    //this.checkIndi();
+    
     console.log();
   }
 
-  infoSub02(){
+ /* infoSub02(){
     this.checkTeam(this.getValue('choose'));
     console.log();
-  }
-  checkIndi(){
+  }*/
+ /* checkIndi(){
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
@@ -48,7 +58,7 @@ export class RegFormComponent implements OnInit {
   checkTeam(id){
     
   }
-
+*/
 
   getValue(id) {
     return (document.getElementById(id) as HTMLInputElement).value;
