@@ -14,7 +14,7 @@
             <div class="input-group">
               <div class="rs-select2 js-select-simple select--no-search">
                 <select (change)="teamMembers($event)">
-                  <option disabled="disabled" selected="selected">Choose option</option>
+                  <option id="choose" disabled="disabled" selected="selected">Choose option</option>
                   <option>1</option>
                   <option>2</option>
                 </select>
@@ -70,7 +70,7 @@ for 1 member
                 </div>
               </div>
 
-            <button class="btn btn--radius-2 btn--red" (click)="infoSub()">submit</button>
+            <button class="btn btn--radius-2 btn--red" (click)="infoSub01()">submit</button>
             </div>
          </div>
       <!-- ===========
@@ -90,7 +90,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="text" name="phone">
+                    <input class="input--style-5" type="text" name="phone" required>
                   </div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ for 1 member
           </div>
 
           <!--submit-->
-          <button class="btn btn--radius-2 btn--red">submit</button>
+          <button (click)="infoSub02()"class="btn btn--radius-2 btn--red">submit</button>
         </div>
       </div>
     </div>
