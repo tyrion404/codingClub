@@ -21,6 +21,8 @@ export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
   pEmail: string;
   pName: string;
   pPhone: number;
+  AddSRef: AngularFireList<any>;
+  AddRef: AngularFireObject<any>;
 
   //constructor(private api: ApicallService) { }
 
@@ -53,6 +55,11 @@ export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
     if(name === '' || email === '' || phone === '') {alert('All fields are mandotory'); }
 
     else {
+      this.AddSRef.push({
+        name: this.getValue('pName'),
+        email: this.getValue('pEmail'),
+        phone: this.getValue('pPhone')
+      })
       this.SaveIndiEntry(name, email, phone);
       alert('submitted');
 
