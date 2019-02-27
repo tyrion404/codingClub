@@ -8,7 +8,7 @@ import { FAQComponent } from './faq/faq.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegFormComponent } from './event/reg-form/reg-form.component';
-
+import {  }
 const routes: Routes = [
   { path: '', component: IntroComponent},
   { path: 'event', component: EventComponent },
