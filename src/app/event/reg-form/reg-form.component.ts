@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {NgIf} from '@angular/common';
 import { ApicallService } from '../.././apicall.service';
 import { checkBinding } from '@angular/core/src/view/util';
+import { AngularFireDatabase } from '@angular/fire/database';
+
+
 
 @Component({
   selector: 'app-reg-form',
@@ -25,17 +28,7 @@ export class RegFormComponent implements OnInit {
   }
 
   infoSub01(){
-    const config = {
-      apiKey: "AIzaSyB30s0J6YXG2vjrpXb2ebxZs07MvMcBwQk",
-      authDomain: "codingclub-f3cba.firebaseapp.com",
-      databaseURL: "https://codingclub-f3cba.firebaseio.com",
-      projectId: "codingclub-f3cba",
-      storageBucket: "codingclub-f3cba.appspot.com",
-      messagingSenderId: "161009164795"
-    };
-   // firebase.initializeApp(config);
-    //this.checkIndi();
-    
+    //this.
     console.log();
   }
 
