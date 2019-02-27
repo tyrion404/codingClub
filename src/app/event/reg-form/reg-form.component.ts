@@ -60,6 +60,7 @@ export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
         email: this.getValue('pEmail'),
         phone: this.getValue('pPhone')
       })
+      console.log('passed');
       this.SaveIndiEntry(name, email, phone);
       alert('submitted');
 
