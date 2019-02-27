@@ -53,6 +53,8 @@ export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
 
     else {
       this.SaveIndiEntry(name, email, phone);
+      alert('submitted');
+
     }
 
   }
