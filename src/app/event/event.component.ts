@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApicallService } from '../apicall.service';
-import * as firebase from '@angular/fire';
-
-
-
 
 @Component({
   selector: 'app-event',
@@ -45,24 +41,8 @@ export class EventComponent implements OnInit {
     this.api.setid(ID);
   }
 
- /* public signIn(){
+  public signIn(){
     
-     this.newLogin(user);
-
   }
 
-  public newLogin(user) {
-
-    if (user) { 
-    //  app(user);
-    console.log(user.email);
-     }
-
-    else {
-      //alert("onload");
-      const provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider);
-
-    }
-  }*/
 }

@@ -2,33 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import {NgIf} from '@angular/common';
 import { ApicallService } from '../.././apicall.service';
 import { checkBinding } from '@angular/core/src/view/util';
-//import { AngularFireDatabase } from '@angular/fire/database';
-import { SubIndi  } from '../../service/infoSub';
-import { CrudService } from 'src/app/service/crud.service';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
-
-
 
 @Component({
   selector: 'app-reg-form',
   templateUrl: './reg-form.component.html',
   styleUrls: ['./reg-form.component.css']
 })
-export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
+export class RegFormComponent implements OnInit {
 
   teamMem: number;
   ID: any;
-  pEmail: string;
-  pName: string;
-  pPhone: number;
-  AddSRef: AngularFireList<any>;
-  AddRef: AngularFireObject<any>;
-
-  //constructor(private api: ApicallService) { }
+  constructor(private api: ApicallService) { }
 
   ngOnInit() {
-    //this.ID = this.api.getid();
-   // console.log(this.api.getid());
+    this.ID = this.api.getid();
+    console.log(this.api.getid());
   }
 
   teamMembers(event : any){
@@ -37,10 +25,17 @@ export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
   }
 
   infoSub01(){
-    //this.
-    //SaveIndiEntry(pName, pEmail, pPhone);
-    //SubIndi();
-    this.checkIndi();
+    const config = {
+      apiKey: "AIzaSyB30s0J6YXG2vjrpXb2ebxZs07MvMcBwQk",
+      authDomain: "codingclub-f3cba.firebaseapp.com",
+      databaseURL: "https://codingclub-f3cba.firebaseio.com",
+      projectId: "codingclub-f3cba",
+      storageBucket: "codingclub-f3cba.appspot.com",
+      messagingSenderId: "161009164795"
+    };
+   // firebase.initializeApp(config);
+    //this.checkIndi();
+    
     console.log();
   }
 
@@ -48,21 +43,13 @@ export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
     this.checkTeam(this.getValue('choose'));
     console.log();
   }*/
-  checkIndi(){
+ /* checkIndi(){
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
     if(name === '' || email === '' || phone === '') {alert('All fields are mandotory'); }
 
-    else {
-      this.AddSRef.push({
-        name: this.getValue('pName'),
-        email: this.getValue('pEmail'),
-        phone: this.getValue('pPhone')
-      })
-      console.log('passed');
-      this.SaveIndiEntry(name, email, phone);
-      alert('submitted');
+    else{
 
     }
 
@@ -71,7 +58,7 @@ export class RegFormComponent extends CrudService implements OnInit, SubIndi  {
   checkTeam(id){
     
   }
-
+*/
 
   getValue(id) {
     return (document.getElementById(id) as HTMLInputElement).value;

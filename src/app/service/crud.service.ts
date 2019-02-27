@@ -9,11 +9,11 @@ export class CrudService {
   AddSRef: AngularFireList<any>;
   AddRef: AngularFireObject<any>;
   constructor(private db: AngularFireDatabase) { }
-  SaveIndiEntry(pName,pEmail,pPhone){
+  SaveIndiEntry(info: SubIndi){
     this.AddSRef.push({
-      name: pName,
-      email: pEmail,
-      phone: pPhone
+      name: info.pName,
+      email: info.pEmail,
+      phone: info.pPhone
     })
   }
 

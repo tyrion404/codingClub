@@ -2,7 +2,6 @@ export interface SubIndi {
         pEmail: string;
         pName: string;
         pPhone: number;
-        SaveIndiEntry(pName, pEmail, pPhone);
 }
 export interface SubTeam {
         lEmail: string;

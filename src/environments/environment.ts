@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebaseConfig: {
+  firebase:{
     apiKey: "AIzaSyB30s0J6YXG2vjrpXb2ebxZs07MvMcBwQk",
     authDomain: "codingclub-f3cba.firebaseapp.com",
     databaseURL: "https://codingclub-f3cba.firebaseio.com",
