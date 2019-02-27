@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgIf} from '@angular/common';
 import { ApicallService } from '../.././apicall.service';
 import { checkBinding } from '@angular/core/src/view/util';
-import { AngularFireDatabase } from '@angular/fire/database';
+//import { AngularFireDatabase } from '@angular/fire/database';
 import { SubIndi  } from '../../service/infoSub';
 import { CrudService } from 'src/app/service/crud.service';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
