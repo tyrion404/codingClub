@@ -12,7 +12,7 @@ export class EventComponent implements OnInit {
 
 
   v: any;
-  public afAuth: AngularFireAuth
+  public afAuth: AngularFireAuth;
   constructor(private api: ApicallService) { }
   
 
