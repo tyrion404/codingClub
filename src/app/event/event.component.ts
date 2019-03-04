@@ -66,6 +66,7 @@ export class EventComponent implements OnInit {
     else{
       let provider = new firebase.auth.GoogleAuthProvider();
       firebase.auth().signInWithPopup(provider);
+      this.user=user;
       console.log(user.email);
     }
   }
