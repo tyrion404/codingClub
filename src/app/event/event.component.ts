@@ -45,17 +45,26 @@ export class EventComponent implements OnInit {
   }
 
   public signIn(){
-    console.log('signIn init');
-    return new Promise<any>((resolve, reject) => {
+    this.newLogin(user);
+   // console.log('signIn init');
+    //return new Promise<any>((resolve, reject) => {
+      
+     // provider.addScope('profile');
+      //provider.addScope('email');
+      //this.afAuth.auth
+      
+      
+     // })
+   // })
+   firebase.auth().onAuthStateChanged(this.newLogin);
+  }
+  public newLogin(user){
+    if(user) console.log(user.email);
+    else{
       let provider = new firebase.auth.GoogleAuthProvider();
-      provider.addScope('profile');
-      provider.addScope('email');
-      this.afAuth.auth
-      .signInWithPopup(provider)
-      .then(res => {
-        resolve(res);
-      })
-    })
+      firebase.auth().signInWithPopup(provider);
+
+    }
   }
 
 }
