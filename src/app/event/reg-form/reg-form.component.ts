@@ -13,7 +13,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { ApicallService } from 'src/app/apicall.service';
 import { switchMap } from 'rxjs/operators';
-import { User } from 'firebase';
+//import { User } from 'firebase';
 import * as firebase from 'firebase';
 //import { EventComponent } from '../event.component';
 
