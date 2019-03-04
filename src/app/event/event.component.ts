@@ -5,8 +5,14 @@ import * as firebase from 'firebase/app';
 import { User } from  'firebase';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 //import { userInfo } from 'firebase/';
+
+interface User {
+  uid: string;
+  email: string;
+}
 
 
 @Component({
@@ -26,7 +32,19 @@ export class EventComponent implements OnInit {
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
     private router: Router,
-    private api: ApicallService) { }
+    private api: ApicallService){
+
+      //// Get auth data, then get firestore user document || null
+      this.user = this.afAuth.authState.pipe(
+        switchMap(user => {
+          if (user) {
+            return this.afs.doc<User>(`users/${user.uid}`).valueChanges()
+          } else {
+            return of(null)
+          }
+        })
+      )
+    }
   
 
   ngOnInit() {
