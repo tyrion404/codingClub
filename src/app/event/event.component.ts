@@ -5,7 +5,7 @@ import * as firebase from 'firebase/app';
 import { User } from  'firebase';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { userInfo } from 'os';
+//import { userInfo } from 'firebase/';
 
 
 @Component({
@@ -59,7 +59,7 @@ export class EventComponent implements OnInit {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${this.user.uid}`);
-    console.log(userInfo);
+    console.log(this.user.email);
     //return this.oAuthLogin(provider);
 
   //  this.newLogin(this.user);
