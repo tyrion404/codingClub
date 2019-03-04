@@ -75,6 +75,35 @@ export class EventComponent implements OnInit {
     this.api.setid(ID);
   }
 
+  googleLogin() {
+    const provider = new firebase.auth.GoogleAuthProvider()
+    return this.oAuthLogin(provider);
+  }
+
+  private oAuthLogin(provider) {
+    return this.afAuth.auth.signInWithPopup(provider)
+      .then((credential) => {
+        this.updateUserData(credential.user)
+      })
+  }
+
+
+  private updateUserData(user) {
+    // Sets user data to firestore on login
+
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+
+    const data: User = {
+      uid: user.uid,
+      email: user.email,      
+    }
+    console.log(data.email);
+    return data.email;
+
+  }
+
+
+/*
   public signIn(){
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
