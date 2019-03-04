@@ -17,7 +17,7 @@ export class EventComponent implements OnInit {
 
 
   v: any;
-  user: User;
+  //user: User;
   //public afAuth: AngularFireAuth;
   
   constructor(
