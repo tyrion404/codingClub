@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApicallService } from '../apicall.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
+import { User } from  'firebase';
 
 @Component({
   selector: 'app-event',
@@ -12,7 +13,7 @@ export class EventComponent implements OnInit {
 
 
   v: any;
-  user: any;
+  user: User;
   public afAuth: AngularFireAuth;
   
   constructor(private api: ApicallService) { }
