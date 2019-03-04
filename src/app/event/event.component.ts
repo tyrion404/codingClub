@@ -5,6 +5,7 @@ import * as firebase from 'firebase/app';
 import { User } from  'firebase';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 //import { userInfo } from 'firebase/';
 
 
@@ -17,6 +18,7 @@ export class EventComponent implements OnInit {
 
 
   v: any;
+  user: Observable<User>;
   //user: User;
   //public afAuth: AngularFireAuth;
   
