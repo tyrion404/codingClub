@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApicallService } from '../apicall.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
-import { User } from  'firebase';
+//import { User } from  'firebase';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
