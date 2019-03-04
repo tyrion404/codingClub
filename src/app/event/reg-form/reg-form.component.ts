@@ -1,4 +1,6 @@
-import { Component, OnInit } from '../../../../node_modules/@angular/core';
+import { Component, OnInit } from '@angular/core';
+//'../../../../node_modules/@angular/core';
+//import {MODAL_BROWSER_PROVIDERS} from "angular2-modal/platform-browser/index";
 import {NgIf} from '../../../../node_modules/@angular/common';
 //import { ApicallService } from '../.././apicall.service';
 //import { checkBinding } from '@angular/core/src/view/util';
