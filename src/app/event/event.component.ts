@@ -12,7 +12,9 @@ export class EventComponent implements OnInit {
 
 
   v: any;
+  user: any;
   public afAuth: AngularFireAuth;
+  
   constructor(private api: ApicallService) { }
   
 
@@ -45,7 +47,7 @@ export class EventComponent implements OnInit {
   }
 
   public signIn(){
-    this.newLogin(user);
+    this.newLogin(this.user);
    // console.log('signIn init');
     //return new Promise<any>((resolve, reject) => {
       
@@ -56,7 +58,7 @@ export class EventComponent implements OnInit {
       
      // })
    // })
-   firebase.auth().onAuthStateChanged(this.newLogin);
+   //firebase.auth().onAuthStateChanged(this.newLogin(this.user));
   }
   public newLogin(user){
     if(user) console.log(user.email);
