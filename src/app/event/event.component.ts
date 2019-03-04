@@ -75,7 +75,7 @@ export class EventComponent implements OnInit {
     this.api.setid(ID);
   }
 
-  googleLogin() {
+  signIn() {
     const provider = new firebase.auth.GoogleAuthProvider()
     return this.oAuthLogin(provider);
   }
