@@ -45,6 +45,7 @@ export class EventComponent implements OnInit {
   }
 
   public signIn(){
+    console.log('signIn init');
     return new Promise<any>((resolve, reject) => {
       let provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('profile');
