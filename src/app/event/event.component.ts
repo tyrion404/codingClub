@@ -3,6 +3,10 @@ import { ApicallService } from '../apicall.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { User } from  'firebase';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
+import { userInfo } from 'os';
+
 
 @Component({
   selector: 'app-event',
@@ -14,9 +18,13 @@ export class EventComponent implements OnInit {
 
   v: any;
   user: User;
-  public afAuth: AngularFireAuth;
+  //public afAuth: AngularFireAuth;
   
-  constructor(private api: ApicallService) { }
+  constructor(
+    private afAuth: AngularFireAuth,
+    private afs: AngularFirestore,
+    private router: Router,
+    private api: ApicallService) { }
   
 
   ngOnInit() {
@@ -48,20 +56,15 @@ export class EventComponent implements OnInit {
   }
 
   public signIn(){
-    this.newLogin(this.user);
-   // console.log('signIn init');
-    //return new Promise<any>((resolve, reject) => {
-      
-     // provider.addScope('profile');
-      //provider.addScope('email');
-      //this.afAuth.auth
-      
-      
-     // })
-   // })
-   //firebase.auth().onAuthStateChanged(this.newLogin(this.user));
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${this.user.uid}`);
+    console.log(userInfo);
+    //return this.oAuthLogin(provider);
+
+  //  this.newLogin(this.user);
   }
-  public newLogin(user){
+  /*public newLogin(user){
     if(user) this.user=user;
     else{
       let provider = new firebase.auth.GoogleAuthProvider();
@@ -70,5 +73,5 @@ export class EventComponent implements OnInit {
       console.log(user.email);
     }
   }
-
+*/
 }
