@@ -7,6 +7,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { EmailValidator } from '@angular/forms';
 //import { userInfo } from 'firebase/';
 
 interface User {
@@ -25,6 +26,7 @@ export class EventComponent implements OnInit {
 
   v: any;
   user: Observable<User>;
+  email:string;
   //user: User;
   //public afAuth: AngularFireAuth;
   
@@ -98,29 +100,11 @@ export class EventComponent implements OnInit {
       email: user.email,      
     }
     console.log(data.email);
-    return data.email;
+    this.email=data.email;
+    return null;
 
   }
-
-
-/*
-  public signIn(){
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${this.user.uid}`);
-    console.log(this.user.email);
-    //return this.oAuthLogin(provider);
-
-  //  this.newLogin(this.user);
+  public  returnEmail(){
+    return this.email;
   }
-  /*public newLogin(user){
-    if(user) this.user=user;
-    else{
-      let provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider);
-      this.user=user;
-      console.log(user.email);
-    }
-  }
-*/
 }
