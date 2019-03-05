@@ -70,7 +70,7 @@ export class RegFormComponent implements OnInit {
   }
 
   infoSub01() {
-    (document.getElementById('pEmail') as HTMLInputElement).value = this.email;
+    (document.getElementById('pEmail') as HTMLInputElement).value = '' + this.email + '';
     this.checkIndi();
     console.log();
   }
