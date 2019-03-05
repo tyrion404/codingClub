@@ -41,8 +41,6 @@ export class RegFormComponent implements OnInit {
 
   ngOnInit() {
     this.signIn();
-    (document.getElementById('pEmail') as HTMLInputElement).value = '' + this.email + '';
-    console.log(this.getValue('pEmail'));
   }
 
   constructor(
@@ -50,7 +48,7 @@ export class RegFormComponent implements OnInit {
     private afs: AngularFirestore,
     private router: Router,
     db: AngularFirestore,
-    private api: ApicallService){
+    private api: ApicallService) {
       this.db = db;
       this.items = this.db.collection('items').valueChanges();
 
@@ -58,12 +56,12 @@ export class RegFormComponent implements OnInit {
       this.user = this.afAuth.authState.pipe(
         switchMap(user => {
           if (user) {
-            return this.afs.doc<User>(`users/${user.uid}`).valueChanges()
+            return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
           } else {
-            return of(null)
+            return of(null);
           }
         })
-      )
+      );
     }
 
   teamMembers(event: any) {
@@ -72,7 +70,6 @@ export class RegFormComponent implements OnInit {
   }
 
   infoSub01() {
-    
     this.checkIndi();
     console.log();
   }
@@ -112,14 +109,13 @@ export class RegFormComponent implements OnInit {
   private oAuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
-        this.updateUserData(credential.user)
+        this.updateUserData(credential.user);
       })
   }
 
 
   private updateUserData(user) {
     // Sets user data to firestore on login
-
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
 
     const data: User = {
