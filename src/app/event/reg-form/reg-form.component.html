@@ -13,8 +13,8 @@
           <div class="value">
             <div class="input-group">
               <div class="rs-select2 js-select-simple select--no-search">
-                <select (change)="teamMembers($event)">
-                  <option id="choose" disabled="disabled" selected="selected">Choose option</option>
+                <select id="choose" (change)="teamMembers($event)">
+                  <option  disabled="disabled" selected="selected">Choose option</option>
                   <option>1</option>
                   <option>2</option>
                 </select>
@@ -50,7 +50,7 @@ for 1 member
                   <div class="row row-refine">
                     <div class="col-9">
                       <div class="input-group-desc">
-                        <input id="pEmail" value=" " class="input--style-5" type="email" name="phone">
+                        <input ng-value="pEmail" value=" " class="input--style-5" type="email" name="phone">
                       </div>
                     </div>
                   </div>
