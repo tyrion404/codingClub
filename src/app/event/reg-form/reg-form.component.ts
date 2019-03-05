@@ -73,7 +73,7 @@ export class RegFormComponent implements OnInit {
 
   infoSub01() {
     this.checkIndi();
-    console.log();
+   // console.log();
   }
   checkIndi() {
     const name = this.getValue('pName');
