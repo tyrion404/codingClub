@@ -41,6 +41,8 @@ export class RegFormComponent implements OnInit {
 
   ngOnInit() {
     this.signIn();
+    (document.getElementById('pEmail') as HTMLInputElement).value = '' + this.email + '';
+    console.log(this.getValue('pEmail'));
   }
 
   constructor(
@@ -70,8 +72,7 @@ export class RegFormComponent implements OnInit {
   }
 
   infoSub01() {
-    (document.getElementById('pEmail') as HTMLInputElement).value = '' + this.email + '';
-    console.log(this.getValue('pEmail'));
+    
     this.checkIndi();
     console.log();
   }
