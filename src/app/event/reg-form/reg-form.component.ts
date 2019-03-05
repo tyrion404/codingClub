@@ -80,7 +80,7 @@ export class RegFormComponent implements OnInit {
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
     // const eventId = this.getValue('I.id');
-    if (name === '' || email === '' || phone === '') { alert('All fields are mandotory'); } else {
+    if (name === null || email === '' || phone === '') { alert('All fields are mandotory'); } else {
       const obj = {
         name: this.getValue('pName'),
         email: this.getValue('pEmail'),
