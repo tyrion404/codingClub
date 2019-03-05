@@ -66,7 +66,9 @@ export class RegFormComponent implements OnInit {
 
   teamMembers(event: any) {
     this.teamMem = event.target.value;
-    console.log(event);
+    console.log(this.teamMem);
+    const no = this.getValue('choose');
+    console.log('member : ' + no);
   }
 
   infoSub01() {
@@ -86,19 +88,12 @@ export class RegFormComponent implements OnInit {
         //eventId: this.eveId
       };
       this.db.collection('items').add(obj);
-      console.log('passed');
-      //alert('submitted');
-
+      alert('submitted');
     }
 
   }
   getValue(id) {
     return (document.getElementById(id) as HTMLInputElement).value;
-  }
-
-  memNo() {
-    const no = this.getValue('choose');
-    console.log('member : ' + no);
   }
 
   signIn() {
