@@ -93,7 +93,8 @@ export class RegFormComponent implements OnInit {
 
   }
   getValue(id) {
-    return (document.getElementById(id) as HTMLInputElement).value;
+    const val = (document.getElementById(id) as HTMLInputElement).value;
+    return val;
   }
 
   signIn() {
