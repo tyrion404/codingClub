@@ -33,6 +33,7 @@ export class RegFormComponent implements OnInit {
   teamMem: number;
   user: Observable<User>;
   ID: any;
+  email: string;
   pEmail: string;
   pName: string;
   pPhone: number;
@@ -69,6 +70,7 @@ export class RegFormComponent implements OnInit {
   }
 
   infoSub01() {
+    (document.getElementById('pEmail') as HTMLInputElement).value = this.email;
     this.checkIndi();
     console.log();
   }
@@ -123,10 +125,8 @@ export class RegFormComponent implements OnInit {
       email: user.email,
     }
     console.log(data.email);
-    //this.pEmail = data.email;
-    (document.getElementById('pEmail') as HTMLInputElement).value = data.email;
+    this.email = data.email;
     return null;
-
   }
 
 
