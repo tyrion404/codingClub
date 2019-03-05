@@ -4,11 +4,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgIf } from '../../../../node_modules/@angular/common';
 //import { ApicallService } from '../.././apicall.service';
 //import { checkBinding } from '@angular/core/src/view/util';
-import { SubIndi } from '../../service/infoSub';
 //import { CrudService } from 'src/app/service/crud.service';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
-import { EventComponent } from '../event.component';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { ApicallService } from 'src/app/apicall.service';
@@ -126,7 +124,7 @@ export class RegFormComponent implements OnInit {
     }
     console.log(data.email);
     //this.pEmail = data.email;
-    (document.getElementById('pEmail') as HTMLInputElement).value=data.email;
+    (document.getElementById('pEmail') as HTMLInputElement).value = data.email;
     return null;
 
   }
