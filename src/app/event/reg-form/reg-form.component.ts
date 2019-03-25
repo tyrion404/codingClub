@@ -78,9 +78,9 @@ export class RegFormComponent implements OnInit {
   }*/
   checkIndi() {
     console.log('start checking');
-    const name = this.getValue('pName');
-    const email = this.getValue('pEmail');
-    const phone = this.getValue('pPhone');
+    const name = (document.getElementById('pName') as HTMLInputElement).value; // this.getValue('pName');
+    const email = (document.getElementById('pEmail') as HTMLInputElement).value; // this.getValue('pEmail');
+    const phone = (document.getElementById('pphone') as HTMLInputElement).value; // this.getValue('pPhone');
 // tslint:disable-next-line: new-parens
     const event = (new EventComponent).event;
     // const eventId = this.getValue('I.id');
