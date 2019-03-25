@@ -87,7 +87,7 @@ export class RegFormComponent implements OnInit {
         phone: this.getValue('pPhone'),
         //eventId: this.eveId
       };
-      this.db.collection('items').add(obj);
+      this.db.collection('individualEntry').add(obj);
       alert('submitted');
     }
 
