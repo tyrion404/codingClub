@@ -40,7 +40,6 @@ export class RegFormComponent implements OnInit {
   pPhone: number;
   items: Observable<any[]>;
   eventid: any;
-
   ngOnInit() {
     this.signIn();
   }
