@@ -85,7 +85,7 @@ export class RegFormComponent implements OnInit {
     const event = (new EventComponent).event;
     // const eventId = this.getValue('I.id');
     console.log('checking');
-    if (name == null || email == null || phone == null) { alert('All fields are mandotory'); } else {
+    if (name === '' || email === '' || phone === '') { alert('All fields are mandotory'); } else {
       const obj = {
 
         name: this.getValue('pName'),
