@@ -83,6 +83,7 @@ export class RegFormComponent implements OnInit {
 // tslint:disable-next-line: new-parens
     const event = (new EventComponent).event;
     // const eventId = this.getValue('I.id');
+    console.log('checking');
     if (name === null || email === '' || phone === '') { alert('All fields are mandotory'); } else {
       const obj = {
 
