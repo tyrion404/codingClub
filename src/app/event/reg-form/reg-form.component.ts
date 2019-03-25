@@ -87,7 +87,7 @@ export class RegFormComponent implements OnInit {
       };
       alert(this.eventid);
       console.log('checking again');
-      this.db.collection('items').doc('entry').set(obj);
+      this.db.collection('items').add(obj); // this.db.collection('items').doc('entry').set(obj);
       /*this.db.collection('individualEntry').add(obj);*/
       alert('submitted');
     }
