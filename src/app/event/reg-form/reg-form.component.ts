@@ -51,7 +51,7 @@ export class RegFormComponent implements OnInit {
     db: AngularFirestore,
     private api: ApicallService) {
       this.db = db;
-      this.items = this.db.collection('individualEntry').valueChanges();
+      this.items = this.db.collection('items').valueChanges();
 
       //// Get auth data, then get firestore user document || null
       this.user = this.afAuth.authState.pipe(
@@ -95,7 +95,7 @@ export class RegFormComponent implements OnInit {
         // eventId: this.eveId
       };
       console.log('checking again');
-      this.db.collection('individualEntry').doc('entry').set(obj);
+      this.db.collection('items').doc('entry').set(obj);
       /*this.db.collection('individualEntry').add(obj);*/
       alert('submitted');
     }
