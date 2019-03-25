@@ -14,17 +14,15 @@ export class EventComponent implements OnInit {
 
 
   v: any;
-  public  event;
+ public  event;
   email: string;
   // user: User;
   // public afAuth: AngularFireAuth;
+  constructor() { }
 
-  constructor(private api: ApicallService) { }
-
+// constructor arg :  private api: ApicallService
 
   ngOnInit() {
-
-   
     this.v = [
       {
         Event_Name: 'Event Name 1',
@@ -50,9 +48,15 @@ export class EventComponent implements OnInit {
   }
 
   public register(ID) {
-    event = ID;
-    console.log('event : ' + ID);
-    this.api.setid(ID);
+     event = ID;
+     console.log('event : ' + ID);
+     // this.api.setid(ID);
   }
 
 }
+/*export class EventID extends EventComponent {
+ // public  eventid = event;
+  public returnId(){
+    return event;
+  }
+}*/
