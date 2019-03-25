@@ -71,19 +71,11 @@ export class RegFormComponent implements OnInit {
     const no = this.getValue('choose');
     console.log('member : ' + no);
   }
-
- /* infoSub01() {
-    this.checkIndi();
-   // console.log();
-  }*/
   checkIndi() {
     console.log('start checking');
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
-// tslint:disable-next-line: new-parens
- //   const eventid = this.api.getid();
-    // const eventId = this.getValue('I.id');
     console.log('checking');
     if (name === '' || email === '' || phone === '') { alert('All fields are mandotory'); } else {
       const obj = {
@@ -93,6 +85,7 @@ export class RegFormComponent implements OnInit {
         phone: this.getValue('pPhone'),
         eventId: this.eventid
       };
+      alert(this.eventid);
       console.log('checking again');
       this.db.collection('items').doc('entry').set(obj);
       /*this.db.collection('individualEntry').add(obj);*/
