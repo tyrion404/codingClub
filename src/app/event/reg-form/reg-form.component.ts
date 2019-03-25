@@ -82,7 +82,7 @@ export class RegFormComponent implements OnInit {
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
 // tslint:disable-next-line: new-parens
-   // const event = (new EventComponent).event;
+    const event = this.api.getid();
     // const eventId = this.getValue('I.id');
     console.log('checking');
     if (name === '' || email === '' || phone === '') { alert('All fields are mandotory'); } else {
@@ -91,8 +91,7 @@ export class RegFormComponent implements OnInit {
         name: this.getValue('pName'),
         email: this.getValue('pEmail'),
         phone: this.getValue('pPhone'),
-      //  eventId: event
-        // eventId: this.eveId
+        eventId: event
       };
       console.log('checking again');
       this.db.collection('items').doc('entry').set(obj);
