@@ -49,7 +49,7 @@ export class EventComponent implements OnInit {
   }
 
   public register(ID) {
-    console.log(ID);
+    console.log("event : "+ID);
     this.api.setid(ID);
   }
 
