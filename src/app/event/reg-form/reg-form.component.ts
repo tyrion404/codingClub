@@ -120,15 +120,14 @@ export class RegFormComponent implements OnInit {
 
   private updateUserData(user) {
     // Sets user data to firestore on login
-   // const userRef: AngularFirestoreDocument<any> = this.afs.createId(); // afs.doc(`users/${user.uid}`)
-
-    const data: User = {
+   const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+   const data: User = {
       uid: user.uid,
       email: user.email,
     };
-    console.log(data.email);
-    this.email = data.email;
-    return null;
+   console.log(data.email);
+   this.email = data.email;
+   return null;
   }
 
 
