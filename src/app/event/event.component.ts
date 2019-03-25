@@ -14,7 +14,7 @@ export class EventComponent implements OnInit {
 
 
   v: any;
-
+  public  event;
   email: string;
   // user: User;
   // public afAuth: AngularFireAuth;
@@ -24,6 +24,7 @@ export class EventComponent implements OnInit {
 
   ngOnInit() {
 
+   
     this.v = [
       {
         Event_Name: 'Event Name 1',
@@ -49,7 +50,8 @@ export class EventComponent implements OnInit {
   }
 
   public register(ID) {
-    console.log("event : "+ID);
+    event = ID;
+    console.log('event : ' + ID);
     this.api.setid(ID);
   }
 
