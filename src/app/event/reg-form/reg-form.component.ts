@@ -77,6 +77,7 @@ export class RegFormComponent implements OnInit {
    // console.log();
   }*/
   checkIndi() {
+    console.log('start checking');
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
