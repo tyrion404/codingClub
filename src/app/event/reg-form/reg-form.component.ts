@@ -39,6 +39,7 @@ export class RegFormComponent implements OnInit {
   pName: string;
   pPhone: number;
   items: Observable<any[]>;
+  eventid: any;
 
   ngOnInit() {
     this.signIn();
@@ -52,7 +53,7 @@ export class RegFormComponent implements OnInit {
     private api: ApicallService) {
       this.db = db;
       this.items = this.db.collection('items').valueChanges();
-
+      this.eventid = event;
       //// Get auth data, then get firestore user document || null
       this.user = this.afAuth.authState.pipe(
         switchMap(user => {
@@ -91,7 +92,7 @@ export class RegFormComponent implements OnInit {
         name: this.getValue('pName'),
         email: this.getValue('pEmail'),
         phone: this.getValue('pPhone'),
-       // event: eventid
+        eventId: this.eventid
       };
       console.log('checking again');
       this.db.collection('items').doc('entry').set(obj);
