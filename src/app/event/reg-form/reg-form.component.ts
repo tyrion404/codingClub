@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-//'../../../../node_modules/@angular/core';
-//import {MODAL_BROWSER_PROVIDERS} from "angular2-modal/platform-browser/index";
+// '../../../../node_modules/@angular/core';
+// import {MODAL_BROWSER_PROVIDERS} from "angular2-modal/platform-browser/index";
 import { NgIf } from '../../../../node_modules/@angular/common';
-//import { ApicallService } from '../.././apicall.service';
-//import { checkBinding } from '@angular/core/src/view/util';
-//import { CrudService } from 'src/app/service/crud.service';
+// import { ApicallService } from '../.././apicall.service';
+// import { checkBinding } from '@angular/core/src/view/util';
+// import { CrudService } from 'src/app/service/crud.service';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { ApicallService } from 'src/app/apicall.service';
 import { switchMap } from 'rxjs/operators';
-//import { User } from 'firebase';
+// import { User } from 'firebase';
 import * as firebase from 'firebase';
-//import { EventComponent } from '../event.component';
+// import { EventComponent } from '../event.component';
 
-//import { ApicallService } from '../../apicall.service';
+// import { ApicallService } from '../../apicall.service';
 
 interface User {
   uid: string;
@@ -50,7 +50,7 @@ export class RegFormComponent implements OnInit {
     db: AngularFirestore,
     private api: ApicallService) {
       this.db = db;
-      this.items = this.db.collection('items').valueChanges();
+      this.items = this.db.collection('individualEntry').valueChanges();
 
       //// Get auth data, then get firestore user document || null
       this.user = this.afAuth.authState.pipe(
@@ -85,7 +85,7 @@ export class RegFormComponent implements OnInit {
         name: this.getValue('pName'),
         email: this.getValue('pEmail'),
         phone: this.getValue('pPhone'),
-        //eventId: this.eveId
+        // eventId: this.eveId
       };
       this.db.collection('individualEntry').add(obj);
       alert('submitted');
@@ -98,7 +98,7 @@ export class RegFormComponent implements OnInit {
   }
 
   signIn() {
-    const provider = new firebase.auth.GoogleAuthProvider()
+    const provider = new firebase.auth.GoogleAuthProvider();
     return this.oAuthLogin(provider);
   }
 
@@ -106,7 +106,7 @@ export class RegFormComponent implements OnInit {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
         this.updateUserData(credential.user);
-      })
+      });
   }
 
 
@@ -117,7 +117,7 @@ export class RegFormComponent implements OnInit {
     const data: User = {
       uid: user.uid,
       email: user.email,
-    }
+    };
     console.log(data.email);
     this.email = data.email;
     return null;
