@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // '../../../../node_modules/@angular/core';
 // import {MODAL_BROWSER_PROVIDERS} from "angular2-modal/platform-browser/index";
 import { NgIf } from '../../../../node_modules/@angular/common';
+import { EventComponent} from '../../event/event.component';
 // import { ApicallService } from '../.././apicall.service';
 // import { checkBinding } from '@angular/core/src/view/util';
 // import { CrudService } from 'src/app/service/crud.service';
@@ -79,12 +80,16 @@ export class RegFormComponent implements OnInit {
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
+// tslint:disable-next-line: new-parens
+    const event = (new EventComponent).event;
     // const eventId = this.getValue('I.id');
     if (name === null || email === '' || phone === '') { alert('All fields are mandotory'); } else {
       const obj = {
+
         name: this.getValue('pName'),
         email: this.getValue('pEmail'),
         phone: this.getValue('pPhone'),
+        eventId: event
         // eventId: this.eveId
       };
       this.db.collection('individualEntry').add(obj);
