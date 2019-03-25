@@ -1,19 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApicallService } from '../apicall.service';
-import { AngularFireAuth } from '@angular/fire/auth';
-import * as firebase from 'firebase/app';
-//import { User } from  'firebase';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Router } from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
-import { EmailValidator } from '@angular/forms';
-//import { userInfo } from 'firebase/';
+// import { userInfo } from 'firebase/';
 
-interface User {
-  uid: string;
-  email: string;
-}
+
 
 
 @Component({
@@ -25,45 +14,32 @@ export class EventComponent implements OnInit {
 
 
   v: any;
-  user: Observable<User>;
-  email:string;
-  //user: User;
-  //public afAuth: AngularFireAuth;
-  
-  constructor(
-    private afAuth: AngularFireAuth,
-    private afs: AngularFirestore,
-    private router: Router,
-    private api: ApicallService){
 
-      //// Get auth data, then get firestore user document || null
-      this.user = this.afAuth.authState.pipe(
-        switchMap(user => {
-          if (user) {
-            return this.afs.doc<User>(`users/${user.uid}`).valueChanges()
-          } else {
-            return of(null)
-          }
-        })
-      )
-    }
-  
+  email: string;
+  // user: User;
+  // public afAuth: AngularFireAuth;
+
+  constructor(private api: ApicallService) { }
+
 
   ngOnInit() {
 
     this.v = [
-      {Event_Name: 'Event Name 1',
+      {
+        Event_Name: 'Event Name 1',
         dec: 'Quam adipiscing vitae proin Nec feugiat nisl pretium',
         ID: '1',
         Url: `../../assets/img/blog/img1.jpg`
 
       },
-      {Event_Name: 'Event Name 2',
+      {
+        Event_Name: 'Event Name 2',
         dec: 'Quam adipiscing vitae proin Nec feugiat nisl pretium',
         ID: '2',
         Url: `../../assets/img/blog/img2.jpg`
       },
-      {Event_Name: 'Event Name 3',
+      {
+        Event_Name: 'Event Name 3',
         dec: 'Quam adipiscing vitae proin Nec feugiat nisl pretium',
         ID: '3',
         Url: `../../assets/img/blog/img3.jpg`
@@ -72,39 +48,9 @@ export class EventComponent implements OnInit {
 
   }
 
-  public register(ID){
+  public register(ID) {
     console.log(ID);
     this.api.setid(ID);
   }
 
-  signIn() {
-    const provider = new firebase.auth.GoogleAuthProvider()
-    return this.oAuthLogin(provider);
-  }
-
-  private oAuthLogin(provider) {
-    return this.afAuth.auth.signInWithPopup(provider)
-      .then((credential) => {
-        this.updateUserData(credential.user)
-      })
-  }
-
-
-  private updateUserData(user) {
-    // Sets user data to firestore on login
-
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
-
-    const data: User = {
-      uid: user.uid,
-      email: user.email,      
-    }
-    console.log(data.email);
-    this.email=data.email;
-    return null;
-
-  }
-  public  returnEmail(){
-    return this.email;
-  }
 }
