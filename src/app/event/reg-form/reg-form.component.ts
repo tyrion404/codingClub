@@ -72,10 +72,10 @@ export class RegFormComponent implements OnInit {
     console.log('member : ' + no);
   }
 
-  infoSub01() {
+ /* infoSub01() {
     this.checkIndi();
    // console.log();
-  }
+  }*/
   checkIndi() {
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
