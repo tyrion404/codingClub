@@ -86,9 +86,9 @@ export class RegFormComponent implements OnInit {
       });
       const memNo = this.teamMem - 1;
       const memberArray = document.getElementsByName('member') ;
-      for ( let i = 0; i < memNo; i += 3) {
+      for ( let i = 0; i < memNo; i += 2) {
         const mName = (memberArray[i] as HTMLInputElement).value;
-        const mPhone = (memberArray[i + 2] as HTMLInputElement).value;
+        const mPhone = (memberArray[i + 1] as HTMLInputElement).value;
         console.log(mName);
         console.log(mPhone);
         this.db.collection('event' + this.eventid).doc('groupEvent').collection('memberInfo').add({
