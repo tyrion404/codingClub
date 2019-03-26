@@ -71,6 +71,27 @@ export class RegFormComponent implements OnInit {
     const no = this.getValue('choose');
     console.log('member : ' + no);
   }
+  
+  checkTeam(){
+    console.log('start checking');
+    const lName = this.getValue('lName');
+    const lEmail = this.getValue('lEmail');
+    const lPhone = this.getValue('lPhone');
+    console.log('checking');
+    if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); } else {
+      const memNo = this.teamMem - 1;
+      const memberArray = document.getElementsByName('member') ;
+      for ( let i = 0; i < memNo; i += 3) {
+        const mName = memberArray[i].nodeValue;
+        const mEmail = memberArray[i + 1].nodeValue;
+        const mPhone = memberArray[i + 2].nodeValue;
+        console.log(mName);
+        console.log(mEmail);
+        console.log(mPhone);
+      }
+    }
+  }
+
   checkIndi() {
     console.log('start checking');
     const name = this.getValue('pName');
