@@ -77,24 +77,43 @@ export class RegFormComponent implements OnInit {
     const lName = this.getValue('lName');
     const lEmail = this.getValue('lEmail');
     const lPhone = this.getValue('lPhone');
+    const memNo = this.teamMem;
+    const memberObject = [];
+    let memCount = 0;
     console.log('checking');
     if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); } else {
-      this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
+     /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
         Name: lName,
         Email: lEmail,
         Phone: lPhone
-      });
-      const memNo = this.teamMem - 1;
+      });*/
+      memberObject[memCount] = {
+        Name: lName,
+        Phone: lPhone
+      };
+      memCount++;
       const memberArray = document.getElementsByName('member') ;
-      for ( let i = 0; i < memNo; i += 2) {
+      for ( let i = 0; i < memNo - 1; i += 2) {
         const mName = (memberArray[i] as HTMLInputElement).value;
         const mPhone = (memberArray[i + 1] as HTMLInputElement).value;
+        if (mName === '' || mPhone === ''){alert('All fields are mandotory'); } else{
+
+        }
         console.log(mName);
         console.log(mPhone);
-        this.db.collection('event' + this.eventid).doc('groupEvent').collection('memberInfo').add({
+        memberObject[memCount] = {
           Name: mName,
           Phone: mPhone
-        });
+        };
+        memCount++;
+       /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('memberInfo').add({
+          Name: mName,
+          Phone: mPhone
+        });*/
+      }
+      this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add(memberObject[0]);
+      for (let j = 1; j < this.teamMem; j++ ) {
+        this.db.collection('event' + this.eventid).doc('groupEvent').collection('memberInfo').add(memberObject[j]);
       }
     }
   }
