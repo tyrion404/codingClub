@@ -1,23 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-// '../../../../node_modules/@angular/core';
-// import {MODAL_BROWSER_PROVIDERS} from "angular2-modal/platform-browser/index";
-import { NgIf } from '../../../../node_modules/@angular/common';
-import { EventComponent} from '../../event/event.component';
-// import { ApicallService } from '../.././apicall.service';
-// import { checkBinding } from '@angular/core/src/view/util';
-// import { CrudService } from 'src/app/service/crud.service';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Router } from '@angular/router';
-import { ApicallService } from 'src/app/apicall.service';
 import { switchMap } from 'rxjs/operators';
-// import { User } from 'firebase';
 import * as firebase from 'firebase';
-import { TeamComponent } from 'src/app/team/team.component';
-// import { EventComponent } from '../event.component';
-
-// import { ApicallService } from '../../apicall.service';
 
 interface User {
   uid: string;
@@ -30,7 +16,7 @@ interface User {
   styleUrls: ['./reg-form.component.css']
 })
 export class RegFormComponent implements OnInit {
-  static entry: number;
+  static entry = 0;
   db: AngularFirestore;
   teamMem: number;
   user: Observable<User>;
@@ -48,9 +34,7 @@ export class RegFormComponent implements OnInit {
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
-    private router: Router,
-    db: AngularFirestore,
-    private api: ApicallService) {
+    db: AngularFirestore) {
       this.db = db;
       this.items = this.db.collection('items').valueChanges();
       this.eventid = event;
@@ -79,7 +63,6 @@ export class RegFormComponent implements OnInit {
     const memNo = this.teamMem;
     let memberObject = [];
     let memCount = 0;
-    RegFormComponent.entry = 1;
     console.log('checking');
     if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); memberObject = []; } else {
      /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
@@ -159,8 +142,6 @@ export class RegFormComponent implements OnInit {
 
 
   private updateUserData(user) {
-    // Sets user data to firestore on login
-   const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
    const data: User = {
       uid: user.uid,
       email: user.email,
