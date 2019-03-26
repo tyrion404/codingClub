@@ -14,6 +14,7 @@ import { ApicallService } from 'src/app/apicall.service';
 import { switchMap } from 'rxjs/operators';
 // import { User } from 'firebase';
 import * as firebase from 'firebase';
+import { TeamComponent } from 'src/app/team/team.component';
 // import { EventComponent } from '../event.component';
 
 // import { ApicallService } from '../../apicall.service';
@@ -67,9 +68,9 @@ export class RegFormComponent implements OnInit {
 
   teamMembers(event: any) {
     this.teamMem = event.target.value;
-    console.log(this.teamMem);
-    const no = this.getValue('choose');
-    console.log('member : ' + no);
+   /* console.log(this.teamMem);
+    const no = this.getValue('choose');*/
+    console.log('member : ' + this.teamMem);
   }
   checkTeam() {
     console.log('start checking');
@@ -78,15 +79,22 @@ export class RegFormComponent implements OnInit {
     const lPhone = this.getValue('lPhone');
     console.log('checking');
     if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); } else {
+      this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
+        Name: lName,
+        Email: lEmail,
+        Phone: lPhone
+      });
       const memNo = this.teamMem - 1;
       const memberArray = document.getElementsByName('member') ;
       for ( let i = 0; i < memNo; i += 3) {
         const mName = (memberArray[i] as HTMLInputElement).value;
-        // const mEmail = (memberArray[i + 1] as HTMLInputElement).value;
         const mPhone = (memberArray[i + 2] as HTMLInputElement).value;
         console.log(mName);
-       // console.log(mEmail);
         console.log(mPhone);
+        this.db.collection('event' + this.eventid).doc('groupEvent').collection('memberInfo').add({
+          Name: mName,
+          Phone: mPhone
+        });
       }
     }
   }
