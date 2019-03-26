@@ -78,10 +78,10 @@ export class RegFormComponent implements OnInit {
     const lEmail = this.getValue('lEmail');
     const lPhone = this.getValue('lPhone');
     const memNo = this.teamMem;
-    const memberObject = [];
+    let memberObject = [];
     let memCount = 0;
     console.log('checking');
-    if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); } else {
+    if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); memberObject = []; } else {
      /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
         Name: lName,
         Email: lEmail,
@@ -96,7 +96,7 @@ export class RegFormComponent implements OnInit {
       for ( let i = 0; i < memNo - 1; i += 2) {
         const mName = (memberArray[i] as HTMLInputElement).value;
         const mPhone = (memberArray[i + 1] as HTMLInputElement).value;
-        if (mName === '' || mPhone === '') {alert('All fields are mandotory'); } else {
+        if (mName === '' || mPhone === '') {alert('All fields are mandotory'); memberObject = [];  } else {
         console.log(mName);
         console.log(mPhone);
         memberObject[memCount] = {
