@@ -30,7 +30,7 @@ interface User {
   styleUrls: ['./reg-form.component.css']
 })
 export class RegFormComponent implements OnInit {
-
+  static entry: number;
   db: AngularFirestore;
   teamMem: number;
   user: Observable<User>;
@@ -65,7 +65,6 @@ export class RegFormComponent implements OnInit {
         })
       );
     }
-
   teamMembers(event: any) {
     this.teamMem = event.target.value;
    /* console.log(this.teamMem);
@@ -80,6 +79,7 @@ export class RegFormComponent implements OnInit {
     const memNo = this.teamMem;
     let memberObject = [];
     let memCount = 0;
+    RegFormComponent.entry = 1;
     console.log('checking');
     if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); memberObject = []; } else {
      /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
@@ -110,11 +110,12 @@ export class RegFormComponent implements OnInit {
         });*/
         }
       }
-      this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add(memberObject[0]);
+      this.db.collection('event' + this.eventid).doc('Entry' + RegFormComponent.entry).collection('leaderInfo').add(memberObject[0]);
       for (let j = 1; j < this.teamMem; j++ ) {
-        this.db.collection('event' + this.eventid).doc('groupEvent').collection('memberInfo').add(memberObject[j]);
+        this.db.collection('event' + this.eventid).doc('Entry' +  + RegFormComponent.entry).collection('memberInfo').add(memberObject[j]);
       }
     }
+    RegFormComponent.entry++;
   }
 
     checkIndi() {
