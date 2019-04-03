@@ -16,7 +16,6 @@ interface User {
   styleUrls: ['./reg-form.component.css']
 })
 export class RegFormComponent implements OnInit {
-  static entry = 0;
   db: AngularFirestore;
   teamMem: number;
   user: Observable<User>;
@@ -93,12 +92,11 @@ export class RegFormComponent implements OnInit {
         });*/
         }
       }
-      this.db.collection('event' + this.eventid).doc('Entry' + RegFormComponent.entry).collection('leaderInfo').add(memberObject[0]);
+      this.db.collection('event' + this.eventid).doc('Entry').collection('leaderInfo').add(memberObject[0]);
       for (let j = 1; j < this.teamMem; j++ ) {
-        this.db.collection('event' + this.eventid).doc('Entry' +  + RegFormComponent.entry).collection('memberInfo').add(memberObject[j]);
+        this.db.collection('event' + this.eventid).doc('Entry').collection('memberInfo').add(memberObject[j]);
       }
     }
-    RegFormComponent.entry++;
   }
 
     checkIndi() {
@@ -112,17 +110,28 @@ export class RegFormComponent implements OnInit {
 
         name: this.getValue('pName'),
         email: this.getValue('pEmail'),
-        phone: this.getValue('pPhone'),
-        eventId: this.eventid
+        phone: this.getValue('pPhone')
       };
-      alert(this.eventid);
       console.log('checking again');
-      this.db.collection('event' + this.eventid).doc('Entry' + RegFormComponent.entry).collection('Participant').add(obj);
-      /*this.db.collection('individualEntry').add(obj);*/
-      alert('submitted');
+      var check = this.checkExistIndi();
+      if(check){
+        this.db.collection('event' + this.eventid).doc('Entry').collection('Participant').add(obj);
+        /*this.db.collection('individualEntry').add(obj);*/
+        alert('submitted');
+      } else {
+        alert('Already Registered');
+      }
     }
 
   }
+
+  checkExistIndi(){
+    let result = true;
+    
+
+    return result;
+  }
+
   getValue(id) {
     const val = (document.getElementById(id) as HTMLInputElement).value;
     return val;
