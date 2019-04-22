@@ -48,9 +48,8 @@ export class EventComponent implements OnInit {
   }
 
   public register(ID) {
-     console.log(ID);
-     this.api.setid(ID);    
-     //event = ID;
+    // tslint:disable-next-line: deprecation
+     event = ID;
      console.log('event : ' + ID);
      this.api.setid(ID);
   }
