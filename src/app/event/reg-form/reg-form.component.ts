@@ -3,7 +3,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { switchMap } from 'rxjs/operators';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase';import {NgIf} from '@angular/common';
+import { ApicallService } from '../.././apicall.service';
 
 interface User {
   uid: string;
