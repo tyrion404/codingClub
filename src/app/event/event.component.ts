@@ -14,8 +14,9 @@ export class EventComponent implements OnInit {
 
 
   v: any;
-  event: any;
+  eventName: any;
   email: string;
+  eventId: any;
   // user: User;
   // public afAuth: AngularFireAuth;
   constructor(private api: ApicallService) { }
@@ -47,10 +48,10 @@ export class EventComponent implements OnInit {
 
   }
 
-  public register(ID) {
-    // tslint:disable-next-line: deprecation
-     event = ID;
-     console.log('event : ' + ID);
+  public register(ID: any, eventname: any) {
+     this.eventName = eventname;
+     this.eventId = ID;
+     //console.log('event : ' + ID);
      this.api.setid(ID);
   }
 

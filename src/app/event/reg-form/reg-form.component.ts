@@ -3,8 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { switchMap } from 'rxjs/operators';
-import * as firebase from 'firebase';import {NgIf} from '@angular/common';
-import { ApicallService } from '../.././apicall.service';
+import * as firebase from 'firebase';
 
 interface User {
   uid: string;
@@ -64,10 +63,7 @@ export class RegFormComponent implements OnInit {
     let memberObject = [];
     let memCount = 0;
     console.log('checking');
-    if (lName === '' || lEmail === '' || lPhone === '') { 
-      alert('All fields are mandotory');
-      memberObject = [];
-     } else {
+    if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); memberObject = []; } else {
      /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
         Name: lName,
         Email: lEmail,
