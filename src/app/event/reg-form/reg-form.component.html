@@ -6,17 +6,17 @@
       </div>
 
 <div class="marginr">
-      <div class="card-body-1" >
-          <div class="name temmem"><div *ngIf="this.always == 1 && availableEntries()"></div></div>
+      <div class="card-body-1">
         <div class="form-row">
-
+            <div class="name temmem">Event ID : {{ ID }}</div>
           <div class="name temmem">Team Members</div>
           <div class="value">
             <div class="input-group">
               <div class="rs-select2 js-select-simple select--no-search">
-                <select (change)="teamMembers($event)">
-                  <option disabled="disabled" selected="selected" >Choose option</option>
-                  <option *ngFor="let item of allowMem ">{{ item }}</option>
+                <select id="choose" (change)="teamMembers($event)">
+                  <option  disabled="disabled" selected="selected">Choose option</option>
+                  <option>1</option>
+                  <option>2</option>
                 </select>
                 <div class="select-dropdown"></div>
               </div>
@@ -38,7 +38,8 @@ for 1 member
                     <div class="row row-refine">
                       <div class="col-9">
                         <div class="input-group-desc">
-                          <input class="input--style-5" type="text" (input)="regName($event)">
+                          <input id= 'pName'class="input--style-5" type="text" >
+                          <!--(input)="regName($event)"-->
                         </div>
                       </div>
                     </div>
@@ -50,7 +51,7 @@ for 1 member
                   <div class="row row-refine">
                     <div class="col-9">
                       <div class="input-group-desc">
-                        <input class="input--style-5" type="email" name="phone">
+                        <input id='pEmail' ng-value='pEmail' value=" " class="input--style-5" type="email"><!-- name="phone"-->
                       </div>
                     </div>
                   </div>
@@ -63,14 +64,14 @@ for 1 member
                   <div class="row row-refine">
                     <div class="col-9">
                       <div class="input-group-desc">
-                        <input class="input--style-5" type="tel" name="phone">
+                        <input id='pPhone'class="input--style-5" type="tel" ><!-- name="phone"-->
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-            <button class="btn btn--radius-2 btn--red" (click)="infoSub()">submit</button>
+            <button class="btn btn--radius-2 btn--red" (click)="checkIndi()">submit</button>
             </div>
          </div>
       <!-- ===========
@@ -79,7 +80,7 @@ for 1 member
       <!--============
       for 2 members
       ==============-->
-      <div *ngIf="teamMem >= 2">
+      <div *ngIf="teamMem == 2">
         <div class="card-body card-5">
 
           <!--for leader-->
@@ -90,7 +91,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="text" name="phone">
+                    <input id='lName'class="input--style-5" type="text"  required><!-- name="phone"-->
                   </div>
                 </div>
               </div>
@@ -103,7 +104,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="email" name="phone">
+                    <input id='lEmail' class="input--style-5" type="email" ><!-- name="phone"-->
                   </div>
                 </div>
               </div>
@@ -116,41 +117,39 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="tel" name="phone">
+                    <input id='lPhone' class="input--style-5" type="tel" ><!-- name="phone"-->
                   </div>
                 </div>
               </div>
             </div>
           </div>
 <!--for member-->
-          <div *ngFor="let item of Var1">
-
-            <h3 style="text-align: center; padding-bottom: 10px;">For Member {{ item + 1 }}</h3>
+          <h3 style="text-align: center; padding-bottom: 10px;">For Member</h3>
           <div class="form-row m-b-55">
             <div class="name">Name</div>
             <div class="value">
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="text" name="phone">
+                    <input class="input--style-5" type="text" name="member">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="form-row m-b-55">
+<!--
+       <div class="form-row m-b-55">
             <div class="name">Email</div>
             <div class="value">
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="email" name="phone">
+                    <input class="input--style-5" type="email" name="member">
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div>  -->
 
           <div class="form-row m-b-55">
             <div class="name">Phone</div>
@@ -158,19 +157,56 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="tel" name="phone">
+                    <input class="input--style-5" type="tel" name="member">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
+<!--for member-->
+          <h3 style="text-align: center; padding-bottom: 10px;">For Member</h3>
+          <div class="form-row m-b-55">
+            <div class="name">Name</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="text" name="member">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <!--submit-->
-          <button class="btn btn--radius-2 btn--red">submit</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+          <!--
+          <div class="form-row m-b-55">
+            <div class="name">Email</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="email" name="member">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  -->
+
+          <div class="form-row m-b-55">
+            <div class="name">Phone</div>
+            <div class="value">
+              <div class="row row-refine">
+                <div class="col-9">
+                  <div class="input-group-desc">
+                    <input class="input--style-5" type="tel" name="member">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!--submit-->
+                    <button (click)="checkTeam()"class="btn btn--radius-2 btn--red">submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
