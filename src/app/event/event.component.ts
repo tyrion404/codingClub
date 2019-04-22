@@ -48,7 +48,9 @@ export class EventComponent implements OnInit {
   }
 
   public register(ID) {
-     event = ID;
+     console.log(ID);
+     this.api.setid(ID);    
+     //event = ID;
      console.log('event : ' + ID);
      this.api.setid(ID);
   }
