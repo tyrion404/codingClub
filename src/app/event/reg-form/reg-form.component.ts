@@ -54,31 +54,34 @@ export class RegFormComponent implements OnInit {
     const no = this.getValue('choose');*/
     console.log('member : ' + this.teamMem);
   }
-  checkTeam() {
-    console.log('start checking');
+    checkTeam() {
+   // console.log('start checking');
     const lName = this.getValue('lName');
     const lEmail = this.getValue('lEmail');
     const lPhone = this.getValue('lPhone');
     const memNo = this.teamMem;
     let memberObject = [];
+    let leaderObject;
     let memCount = 0;
-    console.log('checking');
-    if (lName === '' || lEmail === '' || lPhone === '') { alert('All fields are mandotory'); memberObject = []; } else {
-     /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('leaderInfo').add({
+    //console.log('checking');
+    if (lName === '' || lEmail === '' || lPhone === '') {
+      alert('All fields are mandotory');
+      memberObject = [];
+     } else {
+      leaderObject = {
         Name: lName,
         Email: lEmail,
         Phone: lPhone
-      });*/
-      memberObject[memCount] = {
-        Name: lName,
-        Phone: lPhone
       };
-      memCount++;
+    
       const memberArray = document.getElementsByName('member') ;
-      for ( let i = 0; i < memNo - 1; i += 2) {
+      for ( let i = 0; i < memNo * 2; i += 2) {
         const mName = (memberArray[i] as HTMLInputElement).value;
         const mPhone = (memberArray[i + 1] as HTMLInputElement).value;
-        if (mName === '' || mPhone === '') {alert('All fields are mandotory'); memberObject = [];  } else {
+        if (mName === '' || mPhone === '') {
+          alert('All fields are mandotory');
+          memberObject = [];
+          return; } else {
         console.log(mName);
         console.log(mPhone);
         memberObject[memCount] = {
@@ -86,18 +89,15 @@ export class RegFormComponent implements OnInit {
           Phone: mPhone
         };
         memCount++;
-       /* this.db.collection('event' + this.eventid).doc('groupEvent').collection('memberInfo').add({
-          Name: mName,
-          Phone: mPhone
-        });*/
-        }
+         }
       }
-      this.db.collection('event' + this.eventid).doc('Entry').collection('leaderInfo').add(memberObject[0]);
-      for (let j = 1; j < this.teamMem; j++ ) {
+      this.db.collection('event' + this.eventid).doc('Entry').collection('leaderInfo').add(leaderObject);
+      for (let j = 0; j < this.teamMem; j++ ) {
         this.db.collection('event' + this.eventid).doc('Entry').collection('memberInfo').add(memberObject[j]);
       }
     }
   }
+
 
     checkIndi() {
     console.log('start checking');
