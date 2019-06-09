@@ -27,7 +27,7 @@
 #gallery .gallery-item {
   overflow: hidden;
   position: relative;
-  padding: 0;
+  padding: 8px;
   vertical-align: middle;
   text-align: center;
 }
