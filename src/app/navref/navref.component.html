@@ -1,7 +1,7 @@
 <div style="height: 100vh;">
   <mat-toolbar color="primy" style="background: linear-gradient(45deg, #1de099, #1dc8cd);color: white;padding: 3px 0%">
     <mat-toolbar-row class="navbar-fixed-top" style="background: linear-gradient(45deg, #1de099, #1dc8cd);">
-      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm class="hideinweb">
         <mat-icon>menu</mat-icon>
       </button>
       <span>Coding Club</span>
@@ -11,14 +11,23 @@
         <a [routerLink]="['']" mat-button>
           Home
         </a>
-        <a [routerLink]="['/event']" mat-button>
+        <a [routerLink]="['/aboutus']" mat-button>
+          About Us
+        </a>
+        <a [routerLink]="['/event']"  mat-button>
           Events
+        </a>
+        <a [routerLink]="['/gallery']"  mat-button>
+          Gallery
+        </a>
+        <a [routerLink]="['/faq']"  mat-button>
+          FAQ
         </a>
         <a [routerLink]="['/team']"  mat-button>
           Our Team
         </a>
-        <a [routerLink]="['/team']"  mat-button>
-          My Account
+        <a [routerLink]="['/contactus']"  mat-button>
+          Contact Us
         </a>
       </div>
     </mat-toolbar-row>
@@ -35,7 +44,8 @@
           About Us
         </a>
         <a [routerLink]="['/event']"  mat-list-item>
-          Events</a>
+          Events
+        </a>
         <a [routerLink]="['/gallery']"  mat-list-item>
           Gallery
         </a>
@@ -55,4 +65,5 @@
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill> <router-outlet></router-outlet></mat-sidenav-content>
   </mat-sidenav-container>
+
 </div>

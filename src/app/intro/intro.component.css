@@ -19,9 +19,8 @@
 #intro .intro-text {
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 30%;
   right: 0;
-  height: calc(50% - 60px);
   display: flex;
   align-items: center;
   justify-content: center;

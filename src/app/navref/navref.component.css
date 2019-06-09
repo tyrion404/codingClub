@@ -21,5 +21,9 @@
     width: 190px;
   }
 }
-
+@media (min-width: 786px) {
+  .hideinweb{
+    display: none;
+  }
+}
 
