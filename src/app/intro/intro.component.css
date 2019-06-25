@@ -19,8 +19,9 @@
 #intro .intro-text {
   position: absolute;
   left: 0;
-  top: 30%;
+  top: 60px;
   right: 0;
+  height: calc(50% - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,6 +127,14 @@
   #intro .product-screens .product-screen-1, #intro .product-screens .product-screen-2 {
     display: none;
   }
+  .product-screens
+  {
+    display: none;
+  }
+  .intro-text
+  {
+    padding-top: 50%;
+  }
 }
 
 .fade {
@@ -134,7 +143,3 @@
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
 }
-
-
-
-
