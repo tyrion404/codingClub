@@ -109,6 +109,8 @@ iframe {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  background:white;
 }
 
 .container-contact1 {

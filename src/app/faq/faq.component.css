@@ -4,7 +4,8 @@
 #faq {
   padding: 20px 0;
   overflow: hidden;
-  height: 100vh;
+
+  background:white;
 }
 
 #faq #faq-list {

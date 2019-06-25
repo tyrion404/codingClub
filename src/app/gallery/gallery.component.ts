@@ -28,15 +28,7 @@ export class GalleryComponent implements OnInit {
       {
         Url: '../assets/img/gallery/gallery-4.jpg',
         Id: '4'
-      },
-      {
-        Url: '../assets/img/gallery/gallery-5.jpg',
-        Id: '5'
-      },
-      {
-        Url: '../assets/img/gallery/gallery-6.jpg',
-        Id: '6'
-      },
+      }
     ]
   }
 

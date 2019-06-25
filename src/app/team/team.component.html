@@ -2,19 +2,20 @@
   <div class="container">
     <div class="section-header">
       <h1 class="section-title">Our Team</h1>
-      <span class="section-divider"></span>
-      <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-    </div>
+     </div>
 
       <div *ngFor="let i of v">
-      <div class="col-lg-3 col-md-6">
-        <div class="member">
-          <div class="pic"><img src="{{ i.Url }}"></div>
-          <h4>{{ i.mem_name }}</h4>
-          <span>{{ i.mem_post }}</span>
+        <div class="col-lg-4">
+          <div class="our-team-main">
+          
+          <div class="team-front">
+          <img src="{{ i.Url }}" class="img-fluid" />
+          <h3>{{ i.mem_name }}</h3>
+          <p>{{ i.mem_post }}</p>
+          </div>
+          </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 </section>
 

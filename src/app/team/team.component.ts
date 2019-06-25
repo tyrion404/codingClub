@@ -33,6 +33,36 @@ export class TeamComponent implements OnInit {
         mem_post: 'postPost',
         ID: '4',
         Url: '../assets/img/team/4.jpg'
+      },
+      {mem_name: 'member 5',
+        mem_post: 'postPost',
+        ID: '4',
+        Url: '../assets/img/team/4.jpg'
+      },
+      {mem_name: 'member 6',
+        mem_post: 'postPost',
+        ID: '4',
+        Url: '../assets/img/team/4.jpg'
+      },
+      {mem_name: 'member 7',
+        mem_post: 'postPost',
+        ID: '4',
+        Url: '../assets/img/team/4.jpg'
+      },
+      {mem_name: 'member 8',
+        mem_post: 'postPost',
+        ID: '4',
+        Url: '../assets/img/team/4.jpg'
+      },
+      {mem_name: 'member 9',
+        mem_post: 'postPost',
+        ID: '4',
+        Url: '../assets/img/team/4.jpg'
+      },
+      {mem_name: 'member 10',
+        mem_post: 'postPost',
+        ID: '4',
+        Url: '../assets/img/team/4.jpg'
       }
     ];
 
