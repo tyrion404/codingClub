@@ -715,3 +715,69 @@ input {
     }
 }
 
+
+h3{
+    font-family:sans-serif;
+    text-transform:uppercase;
+    clear:both;
+    font-size:1.5em;
+    font-weight:600;
+    margin:2em 0 1em 0;
+  }
+
+  
+  .slice{
+    background:none;
+    border:none;
+    font-family:sans-serif;
+    padding:1em 1.5em;
+    color:#000;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:.2s ease all;
+    z-index:2;
+    border-radius:0px;
+  }
+   
+    .slice:hover{
+      color:#fff;
+      border-radius:3px;
+    }
+    .slice:before{
+      position:absolute;
+      top:calc(100% - 3px);
+      left:0;
+      width:calc(100%);
+      height:50%;
+      content:'';
+      color:#fff;
+      background:#00ce8d;
+      transition:.2s ease all;
+      z-index:-1;
+    }
+    .slice:after{
+      position:absolute;
+      bottom:calc(100% - 3px);
+      left:0;
+      width:calc(100%);
+      height:50%;
+      content:'';
+      color:#fff;
+      background:#00ce8d;
+      transition:.2s ease all;
+      z-index:-1;
+    }
+
+    .slice:hover:before{
+      top:50%;
+      left:0;
+      width:100%;
+      height:50%;
+    }
+    .slice:hover:after{
+      bottom:50%;
+      left:0;
+      width:100%;
+      height:50%;
+    }
