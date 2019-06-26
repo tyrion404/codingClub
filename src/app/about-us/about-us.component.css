@@ -3,30 +3,11 @@
 /* About Us Section
 --------------------------------*/
 #about {
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   overflow: hidden;
   background:white;
 }
 
-#about .about-img {
-  height: 350px;
-  overflow: hidden;
-}
-
-#about .about-img img {
-  margin-left: -15px;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  #about .about-img {
-    height: auto;
-  }
-  #about .about-img img {
-    margin-left: 0;
-    padding-bottom: 30px;
-  }
-}
 
 #about .content .h2 {
   color: #333;
@@ -239,4 +220,8 @@
 .spotlight {
   background-color: white;
   border-bottom-color: rgba(144, 144, 144, 0.25);
+}
+
+.spotlight h4{
+  line-height: 1.5em;
 }

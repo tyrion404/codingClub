@@ -8,20 +8,23 @@
 <div class="marginr">
       <div class="card-body-1">
         <div class="form-row">
-            <div class="name temmem">Event ID : {{ ID }}</div>
-          <div class="name temmem">Team Members</div>
-          <div class="value">
-            <div class="input-group">
-              <div class="rs-select2 js-select-simple select--no-search">
-                <select id="choose" (change)="teamMembers($event)">
-                  <option  disabled="disabled" selected="selected">Choose option</option>
-                  <option>1</option>
-                  <option>2</option>
-                </select>
-                <div class="select-dropdown"></div>
-              </div>
+            <div class="name temmem">Event ID : {{ ID }} <br><br>Team members:<br><br>
+
+                <div class="value">
+                    <div class="input-group">
+                      <div class="rs-select2 js-select-simple select--no-search">
+                        <select id="choose" (change)="teamMembers($event)">
+                          <option  disabled="disabled" selected="selected">Choose option</option>
+                          <option>1</option>
+                          <option>2</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                      </div>
+                    </div>
+                  </div>
+
             </div>
-          </div>
+          
         </div>
       </div>
 </div>

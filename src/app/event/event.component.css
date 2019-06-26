@@ -18,8 +18,8 @@
 }
 
 #event h4 {
-    font-size: 30px;
-    color: #57b846;
+    font-size: 25px;
+    color: #333333;
     font-weight: 300;
 }
 
@@ -91,6 +91,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 20px;
 }
 
 button {
