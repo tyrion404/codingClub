@@ -45,7 +45,7 @@ for 1 member
                     <div class="row row-refine">
                       <div class="col-9">
                         <div class="input-group-desc">
-                          <input id= 'pName'class="input--style-5" type="text" >
+                          <input id= 'pName'class="input--style-5" type="text" required>
                           <!--(input)="regName($event)"-->
                         </div>
                       </div>
@@ -58,7 +58,7 @@ for 1 member
                   <div class="row row-refine">
                     <div class="col-9">
                       <div class="input-group-desc">
-                        <input id='pEmail' ng-value='pEmail' value=" " class="input--style-5" type="email"><!-- name="phone"-->
+                        <input id='pEmail' ng-value='pEmail' value=" " class="input--style-5" type="email" required><!-- name="phone"-->
                       </div>
                     </div>
                   </div>
@@ -71,14 +71,14 @@ for 1 member
                   <div class="row row-refine">
                     <div class="col-9">
                       <div class="input-group-desc">
-                        <input id='pPhone'class="input--style-5" type="tel" ><!-- name="phone"-->
+                        <input id='pPhone'class="input--style-5" type="tel" required><!-- name="phone"-->
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-            <button class="btn btn--radius-2 btn--red" (click)="checkIndi()">submit</button>
+            <button class="btn btn--radius-2 btn--red" (click)="checkIndi()" id='submit2'>submit</button>
             </div>
          </div>
       <!-- ===========
@@ -111,7 +111,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input id='lEmail' class="input--style-5" type="email" ><!-- name="phone"-->
+                    <input id='lEmail' class="input--style-5" type="email" required><!-- name="phone"-->
                   </div>
                 </div>
               </div>
@@ -124,7 +124,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input id='lPhone' class="input--style-5" type="tel" ><!-- name="phone"-->
+                    <input id='lPhone' class="input--style-5" type="tel" required><!-- name="phone"-->
                   </div>
                 </div>
               </div>
@@ -138,7 +138,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="text" name="member">
+                    <input class="input--style-5" type="text" name="member" required>
                   </div>
                 </div>
               </div>
@@ -151,7 +151,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="email" name="member">
+                    <input class="input--style-5" type="email" name="member" required>
                   </div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ for 1 member
               <div class="row row-refine">
                 <div class="col-9">
                   <div class="input-group-desc">
-                    <input class="input--style-5" type="tel" name="member">
+                    <input class="input--style-5" type="tel" name="member" required>
                   </div>
                 </div>
               </div>
@@ -178,7 +178,7 @@ for 1 member
     <div class="row row-refine">
       <div class="col-9">
         <div class="input-group-desc">
-          <input class="input--style-5" type="text" name="member">
+          <input class="input--style-5" type="text" name="member" required>
         </div>
       </div>
     </div>
@@ -191,7 +191,7 @@ for 1 member
     <div class="row row-refine">
       <div class="col-9">
         <div class="input-group-desc">
-          <input class="input--style-5" type="email" name="member">
+          <input class="input--style-5" type="email" name="member" required>
         </div>
       </div>
     </div>
@@ -204,14 +204,14 @@ for 1 member
     <div class="row row-refine">
       <div class="col-9">
         <div class="input-group-desc">
-          <input class="input--style-5" type="tel" name="member">
+          <input class="input--style-5" type="tel" name="member" required>
         </div>
       </div>
     </div>
   </div>
 </div>
           <!--submit-->
-          <button (click)="checkTeam()"class="btn btn--radius-2 btn--red">submit</button>
+          <button (click)="checkTeam()"class="btn btn--radius-2 btn--red" id='submit'>submit</button>
         </div>
         
       </div>
