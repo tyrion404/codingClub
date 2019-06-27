@@ -19,7 +19,7 @@
               <li>{{i.dec}}</li>
             </ul>
             <!-- <a href="#" class="get-started-btn">Get Started</a> -->
-            <button routerLink="/regform" class="contact1-form-btn1" style="text-decoration: none;font-size: 22px;font-family: Helvetica, Arial, sans-serif; margin-bottom: 15px;padding: auto 60px;"(click)='register(i.ID)'>
+            <button (click)='signIn();register(i.ID);' routerLink="/regform" class="contact1-form-btn1" style="text-decoration: none;font-size: 22px;font-family: Helvetica, Arial, sans-serif; margin-bottom: 15px;padding: auto 60px;">
             <!--(click)='register(i.ID)'-->
 						<span>
 							Register
