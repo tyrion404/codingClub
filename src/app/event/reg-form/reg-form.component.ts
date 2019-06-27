@@ -1,9 +1,16 @@
+import {NgIf} from '@angular/common';
+import { ApicallService } from '../.././apicall.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, isEmpty } from 'rxjs/operators';
 import * as firebase from 'firebase';
+//import { userInfo } from 'os';
+import { renderComponent } from '@angular/core/src/render3';
+import { Router } from '@angular/router';
+import { ɵAnimationGroupPlayer } from '@angular/animations';
+
 
 interface User {
   uid: string;
@@ -26,11 +33,14 @@ export class RegFormComponent implements OnInit {
   pPhone: number;
   items: Observable<any[]>;
   eventid: any;
-  ngOnInit() {
-    this.signIn();
-  }
+  
 
-  constructor(
+  public useravail;
+
+  ngOnInit() { }
+
+  constructor(   
+    private router: Router ,
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
     db: AngularFirestore) {
@@ -48,76 +58,77 @@ export class RegFormComponent implements OnInit {
         })
       );
     }
+
+    
   teamMembers(event: any) {
     this.teamMem = event.target.value;
    /* console.log(this.teamMem);
     const no = this.getValue('choose');*/
     console.log('member : ' + this.teamMem);
   }
-    checkTeam() {
+  checkTeam() {
    // console.log('start checking');
     const lName = this.getValue('lName');
     const lEmail = this.getValue('lEmail');
     const lPhone = this.getValue('lPhone');
     const memNo = this.teamMem;
     let memberObject = [];
-    let leaderObject;
+    let teamObject;
     let memCount = 0;
-    //console.log('checking');
-    if (lName === '' || lEmail === '' || lPhone === '') {
-      alert('All fields are mandotory');
+    let issuccess = false;
+    if (lName === null || lEmail === null || lPhone === null) {
+      alert('All fields1 are mandotory');
       memberObject = [];
+      return;
      } else {
-      leaderObject = {
-        Name: lName,
-        Email: lEmail,
-        Phone: lPhone
-      };
-    
       const memberArray = document.getElementsByName('member') ;
       for ( let i = 0; i < memNo * 2; i += 2) {
         const mName = (memberArray[i] as HTMLInputElement).value;
         const mPhone = (memberArray[i + 1] as HTMLInputElement).value;
         if (mName === '' || mPhone === '') {
-          alert('All fields are mandotory');
+          alert('All fields  are mandotory');
           memberObject = [];
           return; } else {
-        console.log(mName);
-        console.log(mPhone);
         memberObject[memCount] = {
           Name: mName,
           Phone: mPhone
         };
         memCount++;
-         }
+        }
       }
-      this.db.collection('event' + this.eventid).doc('Entry').collection('leaderInfo').add(leaderObject);
-      for (let j = 0; j < this.teamMem; j++ ) {
-        this.db.collection('event' + this.eventid).doc('Entry').collection('memberInfo').add(memberObject[j]);
-      }
+      teamObject = {
+        LeaderName: lName,
+        LeaderEmail: lEmail,
+        LeaderPhone: lPhone,
+        Member: memberObject
+      };
+
+      this.db.collection('event' + this.eventid).doc('Team').collection('TeamInfo').add(teamObject);
+      alert('submited successful');
+      document.getElementById('submit').style.display = 'none';
+      this.router.navigate(['']);
     }
   }
-
 
     checkIndi() {
     console.log('start checking');
     const name = this.getValue('pName');
     const email = this.getValue('pEmail');
     const phone = this.getValue('pPhone');
-    console.log('checking');
     if (name === '' || email === '' || phone === '') { alert('All fields are mandotory'); } else {
       const obj = {
-
         name: this.getValue('pName'),
         email: this.getValue('pEmail'),
         phone: this.getValue('pPhone')
       };
       console.log('checking again');
-      var check = this.checkExistIndi();
+      const check = this.checkExistIndi();
       if(check){
-        this.db.collection('event' + this.eventid).doc('Entry').collection('Participant').add(obj);
+        this.db.collection('event' + this.eventid).doc('Individual').collection('Participants').add(obj);
         /*this.db.collection('individualEntry').add(obj);*/
-        alert('submitted');
+        alert('submitted successfully');
+        document.getElementById('submit2').style.display = 'none';
+        this.router.navigate(['']);
       } else {
         alert('Already Registered');
       }
@@ -127,8 +138,6 @@ export class RegFormComponent implements OnInit {
 
   checkExistIndi(){
     let result = true;
-    
-
     return result;
   }
 
@@ -137,28 +146,14 @@ export class RegFormComponent implements OnInit {
     return val;
   }
 
-  signIn() {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    return this.oAuthLogin(provider);
-  }
-
-  private oAuthLogin(provider) {
-    return this.afAuth.auth.signInWithPopup(provider)
-      .then((credential) => {
-        this.updateUserData(credential.user);
-      });
+  signout(){
+    firebase.auth().signOut().then(function() {
+      document.getElementById('signout').style.display = 'none';
+    });
+    this.router.navigate(['']);
+    alert('signout successfull');
   }
 
 
-  private updateUserData(user) {
-   const data: User = {
-      uid: user.uid,
-      email: user.email,
-    };
-   console.log(data.email);
-   this.email = data.email;
-   return null;
   }
 
-
-}
