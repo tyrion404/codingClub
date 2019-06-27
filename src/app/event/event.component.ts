@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ApicallService } from '../apicall.service';
-// import { userInfo } from 'firebase/';
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase';
+import {Router} from '@angular/router';
+//import { userInfo } from 'os'
+//import { userInfo } from 'firebase/';
 
 
 
@@ -12,18 +16,23 @@ import { ApicallService } from '../apicall.service';
 })
 export class EventComponent implements OnInit {
 
-
+  
   v: any;
-  eventName: any;
+  event: any;
   email: string;
-  eventId: any;
+  public useravail;
+  
+
   // user: User;
   // public afAuth: AngularFireAuth;
-  constructor(private api: ApicallService) { }
+  constructor(private api: ApicallService ,
+              private router: Router ,
+               ) { }
 
 // constructor arg :  private api: ApicallService
 
   ngOnInit() {
+    this.useravail = firebase.auth().currentUser;
     this.v = [
       {
         Event_Name: 'Event Name 1',
@@ -45,20 +54,27 @@ export class EventComponent implements OnInit {
         Url: `../../assets/img/blog/img3.jpg`
       }
     ];
-
   }
-
-  public register(ID: any, eventname: any) {
-     this.eventName = eventname;
-     this.eventId = ID;
-     //console.log('event : ' + ID);
-     this.api.setid(ID);
-  }
-
+signIn() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    if (firebase.auth().currentUser == null) {
+      firebase.auth().signInWithRedirect(provider);
+      firebase.auth().getRedirectResult().then(function(result) {
+        if (result.credential) {
+      }
+    });
+  } else  {
+    }
+    this.router.navigate(['/regform']);
 }
-/*export class EventID extends EventComponent {
- // public  eventid = event;
-  public returnId(){
-    return event;
+
+
+  public register(ID) {
+    console.log(ID);
+    this.api.setid(ID);
+// tslint:disable-next-line: deprecation
+    event = ID;
+    console.log('event : ' + ID);
+    this.api.setid(ID);
   }
-}*/
+}
