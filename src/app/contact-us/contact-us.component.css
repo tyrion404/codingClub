@@ -128,7 +128,7 @@ iframe {
   justify-content: space-between;
   align-items: center;
 
-  padding: 90px 130px 88px 148px;
+  padding: 20px 130px 10px 148px;
 }
 
 /*------------------------------------------------------------------
@@ -398,4 +398,23 @@ textarea.input1 + .shadow-input1 {
     visibility: visible;
     opacity: 1;
   }
+}
+
+
+
+.section-title{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: inherit;
+  font-size: 48px;
+  background-color: #fff;
+}
+
+.section-description
+{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
 }

@@ -2,7 +2,7 @@
 /* Our Team Section
 --------------------------------*/
 #team {
-  padding: 20px 0;
+  padding: 0px 0 10px 0;
   overflow: hidden;
 
   background:white;
@@ -58,6 +58,8 @@
   text-align: center;
   color: inherit;
   font-size: 48px;
+  margin: 0;
+  padding: 20px 0px;
 }
 
 .section-description
