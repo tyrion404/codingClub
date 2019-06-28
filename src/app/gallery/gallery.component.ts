@@ -14,19 +14,19 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
     this.v =[
       {
-        Url: '../assets/img/gallery/1.jpeg',
+        Url: '../assets/img/gallery/1.jpg',
         Id: '1'
       },
       {
-        Url: '../assets/img/gallery/2.jpeg',
+        Url: '../assets/img/gallery/2.jpg',
         Id: '2'
       },
       {
-        Url: '../assets/img/gallery/3.jpeg',
+        Url: '../assets/img/gallery/3.jpg',
         Id: '3'
       },
       {
-        Url: '../assets/img/gallery/4.jpeg',
+        Url: '../assets/img/gallery/4.jpg',
         Id: '4'
       }
     ]
