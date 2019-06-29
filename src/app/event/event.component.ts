@@ -55,18 +55,17 @@ export class EventComponent implements OnInit {
       }
     ];
   }
-signIn() {
+signIn() {      
     const provider = new firebase.auth.GoogleAuthProvider();
     if (firebase.auth().currentUser == null) {
-      firebase.auth().signInWithRedirect(provider);
-      firebase.auth().getRedirectResult().then(function(result) {
-        if (result.credential) {
-      }
-    });
-  } else  {
+      console.log('in signin');
+      firebase.auth().signInWithPopup(provider).then( function(result){
+      window.location.href = "/regform";
+      });
     }
-    this.router.navigate(['/regform']);
-}
+    if (firebase.auth().currentUser == null) { this.router.navigate(['']); } else {      
+    }
+  }
 
 
   public register(ID) {
