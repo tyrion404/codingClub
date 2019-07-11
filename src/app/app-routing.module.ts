@@ -8,6 +8,7 @@ import { FAQComponent } from './faq/faq.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegFormComponent } from './event/reg-form/reg-form.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: '', component: IntroComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'team', component: TeamComponent },
   { path: 'regform', component: RegFormComponent },
+  { path: 'admin', component: AdminComponent },
 ];
 
 @NgModule({

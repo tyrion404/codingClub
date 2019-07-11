@@ -24,6 +24,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { environment } from '../environments/environment';
     ForspaceComponent,
     DashboardComponent,
     NavrefComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

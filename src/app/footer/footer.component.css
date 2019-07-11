@@ -2,31 +2,134 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
-  background: #fff;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
-  color: #333;
-  font-size: 14px;
+
+
+
+/*-------------------------------------
+        13.  Footer-copyright
+--------------------------------------*/
+.footer-copyright{
+  background:#f9f9f9;
+  padding: 0 0 0px;
+}
+.footer-content{
+  padding:120px 0;
 }
 
-#footer .credits {
-  font-size: 13px;
-  color: #888;
+/*single-footer-item*/
+.single-footer-item{
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+}
+.single-footer-item h2{
+  color:#565a5c;
+  font-size:16px;
+  font-weight: 600;
+  margin-bottom:40px;
+}/*single-footer-item*/
+
+/*footer-logo*/
+.footer-logo {
+  padding-top: 76px;
+}
+.footer-logo a, .footer-logo a:hover,.footer-logo a:focus {
+  color: #565a5c;
+  font-size:24px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 14px 0px 0;
+  padding: 10px 0 0 0;
+}
+.footer-logo a>span {
+  color: #00d8ff;
+  text-transform: capitalize;
+} 
+.footer-logo p{
+  color: #aaa;
+  font-size:16px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+}
+/*footer-logo*/
+
+/*single-footer-txt*/
+.single-footer-txt p{
+  margin-bottom:8px;
+}
+.single-footer-txt p a{
+  color:#565a5c;
+  font-size:16px;
+  -webkit-transition: .5s ease-in-out; 
+  -moz-transition:.5s ease-in-out; 
+  -ms-transition:.5s ease-in-out; 
+  -o-transition:.5s ease-in-out;
+  transition: .5s ease-in-out;
+  
 }
 
-#footer .footer-links a {
-  color: #666;
-  padding-left: 15px;
+.footer-copyright hr{
+  border-top: 1px solid #ebebeb;
 }
 
-#footer .footer-links a:first-child {
-  padding-left: 0;
+/*foot-icons*/
+.foot-icons {
+  text-align: center;
+  margin-top:30px;
+}
+.foot-icons .footer-social-links li {
+  padding: 0 10px;
+  text-align: center;
+}
+.foot-icons .footer-social-links a {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  width: 60px;
+  line-height: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  border-radius: 50%;
 }
 
-#footer .footer-links a:hover {
-  color: #1dc8cd;
+.foot-icon-bg-1{
+  background: #3b5999;
 }
+.foot-icon-bg-2{
+  background: #2e2e2e;
+}
+.foot-icon-bg-3{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8938ae+0,c13181+100 */
+  background: #8938ae; /* Old browsers */
+  background: -webkit-linear-gradient(right, #8938ae 0%, #c13181 100%);
+  background: -o-linear-gradient(right, #8938ae 0%, #c13181 100%);
+  background: linear-gradient(to right, #8938ae 0%, #c13181 100%);
+}
+
+.foot-icons .footer-social-links a:hover {
+  /*color: #00d8d5;*/
+  color: #2cdbb5;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.foot-icons p{
+  color:#aaa;
+  font-size:16px;
+  margin-top:28px;
+}
+.foot-icons p a,.foot-icons p a:hover,.foot-icons p a:focus{
+  color:#00d8ff;
+  font-size:16px;
+  margin-top:28px;
+}/*foot-icons*/
 
 .bot0
 {

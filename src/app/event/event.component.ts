@@ -35,24 +35,26 @@ export class EventComponent implements OnInit {
     this.useravail = firebase.auth().currentUser;
     this.v = [
       {
-        Event_Name: 'Event Name 1',
-        dec: 'Quam adipiscing vitae proin Nec feugiat nisl pretium',
+        Event_Name: 'PYTHON Workshop',
+        dec: 'The Coding Club,Svit is going to arrange a three days Certified Python Workshop. Workshop fees : 150rs, 70rs will be refunded after workshop. *Terms and Conditions apply.',
         ID: '1',
-        Url: `../../assets/img/blog/img1.jpg`
-
+        Url: `../../assets/img/events/python.png`,
+        EventDis: 'Register',
       },
       {
-        Event_Name: 'Event Name 2',
-        dec: 'Quam adipiscing vitae proin Nec feugiat nisl pretium',
+        Event_Name: 'CYCLONE 1.0',
+        dec: 'Coding event named CYCLONE 1.0 to enthusiast the coding skills of the students. In this event a coding test was created using platform of HACKEREARTH.',
         ID: '2',
-        Url: `../../assets/img/blog/img2.jpg`
+        Url: `../../assets/img/events/cyclone.png`,
+        EventDis: 'Done'
       },
       {
-        Event_Name: 'Event Name 3',
-        dec: 'Quam adipiscing vitae proin Nec feugiat nisl pretium',
+        Event_Name: 'GITHUB Workshop',
+        dec: 'Seminar on Awareness of GITHUB, through which student can improve the programming skills and share their projects code on forum with IT professionals.',
         ID: '3',
-        Url: `../../assets/img/blog/img3.jpg`
-      }
+        Url: `../../assets/img/events/github.png`,
+        EventDis: 'Done'
+      },
     ];
   }
 signIn() {      

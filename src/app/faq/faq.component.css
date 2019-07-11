@@ -153,7 +153,7 @@
   display: block;
   background: rgba(255,255,255,255) !important;
   color: #4f7351;
-  height: 225px;
+  height: auto;
   transition: height 0.8s;
 }
 
@@ -165,4 +165,9 @@
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+p
+{
+  font-size: 18px;
 }
