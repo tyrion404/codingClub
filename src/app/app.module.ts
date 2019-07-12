@@ -59,6 +59,8 @@ import { AdminComponent } from './admin/admin.component';
     MatListModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    MatButtonModule,
+    MatIconModule,
     //AngularFireDatabaseModule,
 //AngularFireFunctionsModule,
 AngularFirestoreModule,
