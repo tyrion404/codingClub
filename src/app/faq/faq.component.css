@@ -1,4 +1,8 @@
 
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+@import url(https://fonts.googleapis.com/css?family=OpenSans);
+
 /* Frequently Asked Questions Section
 --------------------------------*/
 #faq {
@@ -78,10 +82,6 @@
 .section-header{
   padding: 20px; 
 }
-
-@import url(https://fonts.googleapis.com/css?family=Lato);
-
-@import url(https://fonts.googleapis.com/css?family=OpenSans);
 
 .faq-heading {
   font-family: "Montserrat", sans-serif; 
