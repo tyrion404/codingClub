@@ -1,0 +1,47 @@
+body, html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+  }
+  
+.whitebg{
+    background: white;
+}
+
+  .blog-post {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .entry-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+  .blog-roll-post .entry-title a {
+      color: #3a4145;
+      text-decoration: none;
+      font-size: 2rem;
+      transition: color ease .3s;
+    }
+    .entry-title:hover{
+        color: #57a3e8;
+    }
+    .entry-title {
+      margin: 1rem 0;
+    }
+    .entry-meta {
+      color: #3a4145;
+      margin-bottom: 1rem;
+    }
+    .entry-summary {
+      color: #3a4145;
+      
+    }
+  .more-link {
+    color: #3a4145;
+    transition: color ease .3s;
+  }
+    .more-link:hover {
+      color: #57a3e8;
+    }
+  

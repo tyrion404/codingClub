@@ -13,7 +13,6 @@ import { EventComponent } from './event/event.component';
 import { RegFormComponent } from './event/reg-form/reg-form.component';
 import { ForspaceComponent } from './forspace/forspace.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule,
   MatButtonModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -25,7 +24,10 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AdminComponent } from './admin/admin.component';
-
+import { BlogpageComponent } from './blogpage/blogpage.component';
+import { from } from 'rxjs';
+import { MainblogpageComponent } from './blogpage/mainblogpage/mainblogpage.component';
+import { BlogdetailsComponent } from './blogpage/blogdetails/blogdetails.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,11 @@ import { AdminComponent } from './admin/admin.component';
     EventComponent,
     RegFormComponent,
     ForspaceComponent,
-    DashboardComponent,
     NavrefComponent,
     AdminComponent,
+    BlogpageComponent,
+    MainblogpageComponent,
+    BlogdetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,10 +66,10 @@ import { AdminComponent } from './admin/admin.component';
     MatButtonModule,
     MatIconModule,
     //AngularFireDatabaseModule,
-//AngularFireFunctionsModule,
-AngularFirestoreModule,
-AngularFireStorageModule
-//AngularFireMessagingModule
+    //AngularFireFunctionsModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
+    //AngularFireMessagingModule
   ],
   providers: [ ApicallService ],
   bootstrap: [AppComponent]

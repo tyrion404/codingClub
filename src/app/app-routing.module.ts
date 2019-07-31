@@ -9,6 +9,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegFormComponent } from './event/reg-form/reg-form.component';
 import { AdminComponent } from './admin/admin.component';
+import { BlogpageComponent } from './blogpage/blogpage.component';
+import { MainblogpageComponent } from './blogpage/mainblogpage/mainblogpage.component';
+import { BlogdetailsComponent } from './blogpage/blogdetails/blogdetails.component';
 
 const routes: Routes = [
   { path: '', component: IntroComponent},
@@ -20,6 +23,9 @@ const routes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: 'regform', component: RegFormComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'blogpage', component: BlogpageComponent},
+  { path: 'mainblogpage', component: MainblogpageComponent},
+  { path: 'blogdetails', component: BlogdetailsComponent}
 ];
 
 @NgModule({
