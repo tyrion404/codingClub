@@ -1,0 +1,105 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-mainteam',
+  templateUrl: './mainteam.component.html',
+  styleUrls: ['./mainteam.component.css']
+})
+export class MainteamComponent implements OnInit {
+
+  v: any;
+
+  constructor() { }
+
+  ngOnInit() {
+
+    this.v = [
+      {mem_name: 'Nikunj Prajapati',
+        ID: '1',
+        Url: '../assets/img/team/1.jpg',
+        gitHUB: 'https://github.com/LEO1612D',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Bhargav Patel',
+        ID: '2',
+        Url: '../assets/img/team/2.jpg',
+        gitHUB: 'https://github.com/bhargavpatel081',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Shailendra Raj',
+        ID: '3',
+        Url: '../assets/img/team/3.jpg',
+        gitHUB: 'https://github.com/Shailu10',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Darshan',
+        ID: '4',
+        Url: '../assets/img/team/4.jpg',
+        gitHUB: 'https://github.com/DRSTARK7',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Shlok Gadre',
+      ID: '4',
+      Url: '../assets/img/team/5.jpg',
+      gitHUB: 'https://github.com/Nustacoder',
+      linkED: '',
+      insTA: '',
+      },
+      {mem_name: 'Yash Shah',
+        ID: '4',
+        Url: '../assets/img/team/6.jpg',
+        gitHUB: 'https://github.com/yash539',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Snehil Patel',
+        ID: '5',
+        Url: '../assets/img/team/7.jpg',
+        gitHUB: 'https://github.com/highman09',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: '????????',
+        ID: '12',
+        Url: '../assets/img/team/8.jpg',
+        gitHUB: 'https://github.com/',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Chintan Prajapati',
+        ID: '6',
+        Url: '../assets/img/team/9.jpg',
+        gitHUB: 'https://github.com/tyrion404',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Roshil Kapatel',
+      ID: '9',
+      Url: '../assets/img/team/10.jpg',
+      gitHUB: 'https://github.com/',
+      linkED: '',
+      insTA: '',
+      },
+      {mem_name: 'Chintan Kotecha',
+        ID: '4',
+        Url: '../assets/img/team/11.jpg',
+        gitHUB: 'https://github.com/cvk007',
+        linkED: '',
+        insTA: '',
+      },
+      {mem_name: 'Sanket vavadia',
+        ID: '10',
+        Url: '../assets/img/team/12.jpg',
+        gitHUB: 'https://github.com/',
+        linkED: '',
+        insTA: '',
+      }
+    ];
+
+}
+
+}

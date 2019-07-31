@@ -16,6 +16,10 @@
     .hidein{
       display: none;
     }
+    .logo{
+      width:100%;
+      margin-left: 75%;
+    }
   
     .mat-drawer-inner-container
     {

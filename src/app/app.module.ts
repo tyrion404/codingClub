@@ -28,6 +28,8 @@ import { BlogpageComponent } from './blogpage/blogpage.component';
 import { from } from 'rxjs';
 import { MainblogpageComponent } from './blogpage/mainblogpage/mainblogpage.component';
 import { BlogdetailsComponent } from './blogpage/blogdetails/blogdetails.component';
+import { MaingalleryComponent } from './gallery/maingallery/maingallery.component';
+import { MainteamComponent } from './team/mainteam/mainteam.component'
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { BlogdetailsComponent } from './blogpage/blogdetails/blogdetails.compone
     BlogpageComponent,
     MainblogpageComponent,
     BlogdetailsComponent,
+    MaingalleryComponent,
+    MainteamComponent,
   ],
   imports: [
     BrowserModule,

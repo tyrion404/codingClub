@@ -57,3 +57,48 @@
   color: inherit;
   font-size: 48px;
 }
+
+
+
+.material
+{
+  height: 50px;
+  padding: 0 50px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white !important;
+  border-radius: 1px;
+  background-color: #010101;
+  border: none;
+  -webkit-box-shadow: z10;
+  -moz-box-shadow:    z10;
+  box-shadow:         z10;
+  margin: 25px 0;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Roboto', 'Helvetica', 'Arial', 'Sans Serif';
+  box-sizing: border-box;
+  border-radius: 7px;
+  background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left,#00c8ff,#0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+}
+
+.material a{
+  color: #FFFFFF;
+}
+
+.material:active, .material:focus {
+  background-color: darkblue;
+  -webkit-box-shadow: z50;
+  -moz-box-shadow:    z50;
+  box-shadow:         z50;
+  outline: 0;
+
+  -webkit-transition: trans;
+  transition: trans;
+}

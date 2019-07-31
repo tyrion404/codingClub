@@ -123,7 +123,7 @@ h1
 	position:absolute;
 	top:0;
 	left:0;
-	padding:5px 15px 0 15px;
+	padding:5px 0 0 0;
 	text-align:left;
 	background:#fff;
 	
@@ -136,7 +136,7 @@ h1
 	position:relative;
 	z-index:10;
 	background:#fff;
-	padding:15px;
+	padding:15px 0;
 	bottom:0px;
 	transition: all 0.5s ease;
 }
@@ -221,3 +221,54 @@ h1
 .single-team-member {
     margin-bottom: 50px;
 }
+
+@media (max-width: 786px) {
+    .imgg
+    {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .material
+  {
+    height: 50px;
+    padding: 0 50px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white !important;
+    border-radius: 1px;
+    background-color: #010101;
+    border: none;
+    -webkit-box-shadow: z10;
+    -moz-box-shadow:    z10;
+    box-shadow:         z10;
+    margin: 25px 0;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Roboto', 'Helvetica', 'Arial', 'Sans Serif';
+    box-sizing: border-box;
+    border-radius: 7px;
+    background: #00c6ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left,#00c8ff,#0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  }
+  
+  .material a{
+    color: #FFFFFF;
+  }
+  
+  .material:active, .material:focus {
+    background-color: darkblue;
+    -webkit-box-shadow: z50;
+    -moz-box-shadow:    z50;
+    box-shadow:         z50;
+    outline: 0;
+  
+    -webkit-transition: trans;
+    transition: trans;
+  }

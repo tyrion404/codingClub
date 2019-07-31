@@ -12,6 +12,8 @@ import { AdminComponent } from './admin/admin.component';
 import { BlogpageComponent } from './blogpage/blogpage.component';
 import { MainblogpageComponent } from './blogpage/mainblogpage/mainblogpage.component';
 import { BlogdetailsComponent } from './blogpage/blogdetails/blogdetails.component';
+import { MaingalleryComponent } from './gallery/maingallery/maingallery.component';
+import { MainteamComponent } from './team/mainteam/mainteam.component';
 
 const routes: Routes = [
   { path: '', component: IntroComponent},
@@ -25,7 +27,9 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'blogpage', component: BlogpageComponent},
   { path: 'mainblogpage', component: MainblogpageComponent},
-  { path: 'blogdetails', component: BlogdetailsComponent}
+  { path: 'blogdetails', component: BlogdetailsComponent},
+  { path: 'maingallery', component: MaingalleryComponent},
+  { path: 'mainteam', component: MainteamComponent}
 ];
 
 @NgModule({

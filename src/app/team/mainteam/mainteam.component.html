@@ -1,0 +1,29 @@
+<section id="team" class="section-bg">
+  <div class="container">
+    <div class="section-header">
+      <h1 class="section-title">Our Team</h1>
+      <!--<img src="../../assets/img/team.png">-->
+     </div>
+
+      <div *ngFor="let i of v">
+          <div class="col-16 col-md-6 col-lg-4">
+              <div class="single-team-member">
+                  <div class="member-image">
+                      <img src="{{i.Url}}" alt="">
+                      <div class="team-hover-effects">
+                          <div class="team-social-icon">
+                              <a href="{{i.gitHUB}}"><img src="../../assets/img/footer/githublogo.png"></a>
+                              <a href="{{i.linkED}}"><img src="../../assets/img/footer/linkedin.png"></a>
+                              <a href="{{i.insTA}}"><img src="../../assets/img/footer/instagram.png"></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="member-text">
+                      <h4>{{i.mem_name}}</h4>
+                      <p>{{i.mem_post}}</p>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+</section>
