@@ -18,9 +18,25 @@
     }
     .logo{
       width:100%;
-      margin-left: 75%;
+      margin-left: 77.5%;
     }
   
+    .CCfont{
+      display: none;
+    }
+
+    .navbar-up{
+      background: #24C6DC !important;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right,#24C6DC, #514A9D ) !important;  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right,#24C6DC, #514A9D) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
+    }
+    .navbar-fixed-top{
+      background: #24C6DC !important;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right,#24C6DC, #514A9D ) !important;  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right,#24C6DC, #514A9D) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
+    }
     .mat-drawer-inner-container
     {
       width: 190px;
