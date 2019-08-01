@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 ## CodingClub
-demo : https://codingclub.netlify.com
+demo : https://codingclubsvit.ml
 
 ## Development server
 
