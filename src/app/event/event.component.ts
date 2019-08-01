@@ -62,15 +62,13 @@ signIn() {
     if (firebase.auth().currentUser == null) {
       console.log('in signin');
       firebase.auth().signInWithPopup(provider).then( function(result){
-      //window.location.href = "/regform";
-        window.location.reload();
+        alert('Signin successful. Click on register');
+        //window.location.reload();
       });
     }
    else{
       this.router.navigate(['/regform']);
 
-    }
-    if (firebase.auth().currentUser == null) { this.router.navigate(['']); } else {      
     }
   }
 
